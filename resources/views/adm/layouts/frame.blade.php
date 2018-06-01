@@ -15,7 +15,7 @@
     
     <link type="text/css" rel="stylesheet" href="{{ asset('css/admin/admin.css') }}"  media="screen,projection"/>
 
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
@@ -179,30 +179,19 @@
 </header>  
     @yield('contenido')                                 
         </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.js"></script>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Materialize Core JavaScript -->
     <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
     <script src="{{ asset('js/drop.js') }}"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-          $('select').material_select();
-        });
+  
 
-          document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems, options);
-  });
+
 
   // Or with jQuery
 
-  $(document).ready(function(){
-    $('.collapsible').collapsible();
-  });
-  $(document).ready(function(){
-    $('.btn').sideNav();
-  });
+
 
         
     </script>
