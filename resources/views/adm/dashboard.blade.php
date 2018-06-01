@@ -4,7 +4,7 @@
 
 @section('contenido')
 <main>
-xxxxxxxxxxxxx
+Dashboard
 </main>
 
 @endsection
