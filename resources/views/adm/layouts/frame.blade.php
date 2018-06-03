@@ -21,49 +21,46 @@
 <body>
     <!-- CABECERA -->
 <header>
- <nav class="top-nav">
-        <div class="container">
-          <div class="nav-wrapper">
- 
+  <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Cerrar Sesión</a></li>
+</ul>
 
-      <a class="page-title">
-            @yield('titulo')
-          </a>
-            <div class="right dropdown-menu" aria-labelledby="navbarDropdown">
+  <nav>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <div class="nav-wrapper">
+      <div class="container">
+      <a href="#!" class="brand-logo">@yield('titulo') </a>
+      <ul class="right hide-on-med-and-down">
+         <!-- Dropdown Trigger -->
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Francisco Milano<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
 
-                                  |
-                                    <a class="right" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('  Cerrar Sesión|') }}
-                                    </a>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">mama</a></li>
+  </ul>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <!-- MENÚ
-
-      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div> -->
+  <!-- SIDENAV MENU -->
+<ul id="slide-out" class="sidenav sidenav-fixed">
+  <div class="logo"><a id="logo-container" href="" class="brand-logo">
+          <img class="responsive-img" src="{{ asset('img/logoprincipal.png') }}" alt="">
+        </a></div>
       
 
-      <ul id="nav-mobile" class="side-nav fixed">
-        <div class="logo"><a id="logo-container" href="" class="brand-logo">
-          <img class="responsive-img" src="{{ asset('img/logo/logo-header.png') }}" alt="">
-        </a></div>
-        <li class="no-padding">
 
-          <ul class="collapsible collapsible-accordion">
+      <ul class="collapsible collapsible-accordion">
 
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">home</i>Home</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="{{route('home.create')}}">Editar lineas home</a></li>
-                  <li><a href="{{route('destacados.index')}}">Editar destacados</a></li>
+                  <li><a href="">Editar destacados</a></li>
                 </ul>
               </div>
             </li>
@@ -71,41 +68,41 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">business</i>Empresa</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('contenidoempresa.index')}}">Editar contenido</a></li>
+                  <li><a href="">Editar contenido</a></li>
                 </ul>
               </div>
             </li>
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">watch</i>Productos</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('categorias.create')}}">Crear Categoria</a></li>
-                  <li><a href="{{route('categorias.index')}}">Editar Categoria</a></li>
-                  <li><a href="{{route('productos.create')}}">Crear Producto</a></li>
-                  <li><a href="{{route('productos.index')}}">Editar Producto</a></li>
-                  <li><a href="{{route('modelos.create')}}">Crear Modelo</a></li>
-                  <li><a href="{{route('modelos.index')}}">Editar Modelo</a></li>
+                  <li><a href="">Crear Categoria</a></li>
+                  <li><a href="">Editar Categoria</a></li>
+                  <li><a href="">Crear Producto</a></li>
+                  <li><a href="">Editar Producto</a></li>
+                  <li><a href="">Crear Modelo</a></li>
+                  <li><a href="">Editar Modelo</a></li>
                 </ul>
               </div>
             </li>
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">chrome_reader_mode</i>Tipos de Ventanas</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('tiposventana.create')}}">Crear Tipo de ventana</a></li>
-                  <li><a href="{{route('tiposventana.index')}}">Editar Tipo de ventana</a></li>
+                  <li><a href="">Crear Tipo de ventana</a></li>
+                  <li><a href="">Editar Tipo de ventana</a></li>
                 </ul>
               </div>
             </li>
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">check_box_outline_blank</i>Tipos de Vidrios</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('tiposvidrio.index')}}">Editar Tipo de vidrio</a></li>
+                  <li><a href="">Editar Tipo de vidrio</a></li>
                 </ul>
               </div>
             </li>
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">build</i>Servicios</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('servicios.index')}}">Editar servicio</a></li>
+                  <li><a href="">Editar servicio</a></li>
                 </ul>
               </div>
             </li>
@@ -113,15 +110,15 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">work</i>Obras</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('obras.create')}}">Crear obra</a></li>
-                  <li><a href="{{route('obras.index')}}">Editar obra</a></li>
+                  <li><a href="">Crear obra</a></li>
+                  <li><a href="">Editar obra</a></li>
                 </ul>
               </div>
             </li>
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">business</i>Fabrica</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('fabrica.index')}}">Editar fabrica</a></li>
+                  <li><a href="">Editar fabrica</a></li>
                 </ul>
               </div>
             </li>
@@ -129,8 +126,8 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">compare_arrows</i>Sliders</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('sliders.create')}}">Crear slider</a></li>
-                  <li><a href="{{route('sliders.index')}}">Editar slider</a></li>
+                  <li><a href="">Crear slider</a></li>
+                  <li><a href="">Editar slider</a></li>
                 </ul>
               </div>
             </li>
@@ -148,7 +145,7 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">info</i>Datos de la empresa</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('empresa.index')}}">Editar datos</a></li>
+                  <li><a href="">Editar datos</a></li>
                 </ul>
               </div>
             </li>
@@ -160,7 +157,7 @@
                 </ul>
               </div>
             </li>--}}
-            @if(Auth::user())
+        <!--    @if(Auth::user())
                 @if(Auth::user()->nivel === 'administrador')
               <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">account_circle</i>Usuarios</a>
                 <div class="collapsible-body">
@@ -171,25 +168,30 @@
                 </div>
               </li>
               @endif
-            @endif
+            @endif-->
           </ul>
 
-      </ul>
-      <a class="btn" data-activates="nav-mobile"><i class="material-icons">menu</i></a>
+    </ul>
+
 </header>  
-    @yield('contenido')                                 
-        </div>
+<main style="">
+  <div class="container">
+  @yield('contenido')                                 
+  </div>
+  @yield('js')
+</main>
+        
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Materialize Core JavaScript -->
     <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
-    <script src="{{ asset('js/drop.js') }}"></script>
     <script type="text/javascript">
   
-
-
-
-  // Or with jQuery
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+    $(".dropdown-trigger").dropdown();
+    $('.collapsible').collapsible();
+  });
 
 
 

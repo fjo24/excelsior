@@ -3,8 +3,8 @@
 @section('titulo', 'Bienvenido')
 
 @section('contenido')
-<main>
-Dashboard
-</main>
+DASHBOARD
 
+@endsection
+@section('js')
 @endsection

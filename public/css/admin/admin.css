@@ -6,13 +6,14 @@
   display: block;
 }
 
-main, header, footer{
-	padding-left: 0%;
+
+main{
+  padding-left: 300px;
 }
 
-@media only screen and (min-width: 1003px){
+@media only screen and (max-width: 992px){
 main, header, footer{
-      padding-left: 15%;
+      padding-left: 0%;
   }
 }
 
@@ -41,11 +42,11 @@ main, header, footer{
 }
 
 main{
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 nav.top-nav{
-	box-shadow: none;
+  box-shadow: none;
 }
 
 .side-nav .collapsible-body li a, .side-nav.fixed .collapsible-body li a {
@@ -56,8 +57,9 @@ nav.top-nav{
       background-color: rgba(77, 182, 172, 0.80);
 }
 
-.btn, .btn:hover, .top-nav{
-	background-color: #32398E;
+.btn, .btn:hover, .nav-wrapper{
+  background-color: #ED3237;
+  padding-left: 20%;
 }
 
 .icono{
@@ -125,9 +127,9 @@ button:focus {
   float: right;
 }
 
-side-nav li>a>i, .side-nav li>a>[class^="mdi-"], .side-nav li>a li>a>[class*="mdi-"], .side-nav li>a>i.material-icons {
+side-nav li>a>i, .sidenav li>a>[class^="mdi-"], .sidenav li>a li>a>[class*="mdi-"], .sidenav li>a>i.material-icons {
     margin: 0 5px 0 0;
-    color: #32398E;
+    color: #ED3237;
     transform: translateY(-2px);
 }
 
@@ -146,7 +148,7 @@ side-nav li>a>i, .side-nav li>a>[class^="mdi-"], .side-nav li>a li>a>[class*="md
  }
 
 select option{
-	color: #32398E !important;
+  color: #32398E !important;
 }
 
 .img-admin{
@@ -155,9 +157,9 @@ select option{
 }
 
 @media only screen and (min-width: 993px){
-	.container {
-	    width: 70%;
-	}
+  .container {
+      width: 70%;
+  }
 }
 /*
 @media only screen and (min-width: 570px){
