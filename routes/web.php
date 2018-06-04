@@ -28,6 +28,28 @@ Route::prefix('adm')->group(function () {
 
 //Route::get('/home', 'HomeController@index')->name('home');
     /*------------Home----------------*/
-    Route::resource('home', 'adm\HomeController');
+    Route::resource('home', 'adm\HomeController'); //evaluar
+    //Banner
+    Route::get('/banner', 'adm\HomeController@banner')->name('banner');
+    Route::get('/banner/{banner_id}', 'adm\HomeController@banneredit')->name('banneredit');
+    Route::put('/banner/{banner_id}/update', 'adm\HomeController@bannerupdate')->name('bannerupdate');
+    /*------------sliders----------------*/
+    Route::resource('sliders', 'adm\SlidersController');
+    Route::delete('sliders/{id}/destroy', [
+        'uses' => 'adm\SlidersController@destroy',
+        'as'   => 'sliders.destroy',
+
+    ]);
+    /*------------SERVICIOS----------------*/
+    Route::resource('servicios', 'adm\ServiciosController');
+
+    /*------------USUARIOS----------------*/
+    Route::resource('user', 'adm\UserController');
+
+    /*------------MANTENIMIENTO----------------*/
+    Route::resource('mantenimientos', 'adm\MantenimientosController');
+
+    /*------------EMPRESA----------------*/
+    Route::resource('empresas', 'adm\EmpresasController');
 
 });

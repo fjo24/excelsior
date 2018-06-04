@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\adm;
 
+use App\Banner;
 use App\Destacado_home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -49,8 +50,39 @@ class HomeController extends Controller
         return view('adm.dashboard');
     }
 
-    public function destroy($id)
+    //EDITAR BANNER
+
+    public function banner()
     {
-        //
+        $banner = Banner::all()->first();
+        return redirect()->route('banneredit', $banner->id);
+    }
+
+    public function banneredit($id)
+    {
+        $banner = Banner::find($id);
+        return view('adm.home.banneredit')
+            ->with('banner', $banner);
+    }
+
+    public function bannerupdate(Request $request, $id)
+    {
+        $dato         = Banner::find($id);
+        $dato->texto  = $request->texto;
+        $dato->texto2 = $request->texto2;
+        $dato->texto3 = $request->texto3;
+        $id++;
+
+        if ($request->hasFile('imagen')) {
+            if ($request->file('imagen')->isValid()) {
+                $file = $request->file('imagen');
+                $path = public_path('img/home/banner/');
+                $request->file('imagen')->move($path, $id . '_' . $file->getClientOriginalName());
+                $dato->imagen = 'img/home/banner/' . $id . '_' . $file->getClientOriginalName();
+            }
+        }
+        $dato->update();
+
+        return view('adm.dashboard');
     }
 }

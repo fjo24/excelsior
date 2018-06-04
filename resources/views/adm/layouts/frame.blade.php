@@ -15,7 +15,7 @@
     
     <link type="text/css" rel="stylesheet" href="{{ asset('css/admin/admin.css') }}"  media="screen,projection"/>
 
-
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
@@ -59,8 +59,33 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">home</i>Home</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('home.create')}}">Editar lineas home</a></li>
-                  <li><a href="">Editar destacados</a></li>
+                  <li><a href="{{route('banner')}}">Editar Banner</a></li>
+                  <li><a href="{{route('home.create')}}">Editar Destacados</a></li>
+                  <li><a href=""></a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">compare_arrows</i>Sliders</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="{{route('sliders.create')}}">Crear slider</a></li>
+                  <li><a href="{{route('sliders.index')}}">Editar slider</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">build</i>Servicios</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="{{route('servicios.index')}}">Editar servicio</a></li>
+                </ul>
+              </div>
+            </li>
+            
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">business</i>Mantenimiento</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href= "{{ route('mantenimientos.create') }}">Editar contenido</a></li>
                 </ul>
               </div>
             </li>
@@ -68,7 +93,7 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">business</i>Empresa</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="">Editar contenido</a></li>
+                  <li><a href="{{ route('empresas.create') }}">Editar contenido</a></li>
                 </ul>
               </div>
             </li>
@@ -99,13 +124,6 @@
                 </ul>
               </div>
             </li>
-            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">build</i>Servicios</a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a href="">Editar servicio</a></li>
-                </ul>
-              </div>
-            </li>
 
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">work</i>Obras</a>
               <div class="collapsible-body">
@@ -123,14 +141,6 @@
               </div>
             </li>
 
-            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">compare_arrows</i>Sliders</a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a href="">Crear slider</a></li>
-                  <li><a href="">Editar slider</a></li>
-                </ul>
-              </div>
-            </li>
 
         {{--      <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">insert_photo</i>Logos</a>
               <div class="collapsible-body">
@@ -149,7 +159,14 @@
                 </ul>
               </div>
             </li>
-
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">account_circle</i>Usuarios</a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="{{route('user.create')}}">Crear Usuario</a></li>
+                    <li><a href="{{route('user.index')}}">Editar Usuario</a></li>
+                  </ul>
+                </div>
+              </li>
          {{--    <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">pin_drop</i>Metadatos</a>
               <div class="collapsible-body">
                 <ul>
@@ -186,18 +203,22 @@
     <!-- Materialize Core JavaScript -->
     <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
     <script type="text/javascript">
-  
+
+
+ /*         document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, options);
+  });
+*/
+  // Or with jQuery
+
+
 $(document).ready(function(){
     $('.sidenav').sidenav();
     $(".dropdown-trigger").dropdown();
     $('.collapsible').collapsible();
+
   });
-
-
-
-        
     </script>
-
-
 </body>
 </html>
