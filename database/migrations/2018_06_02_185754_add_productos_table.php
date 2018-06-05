@@ -18,7 +18,7 @@ class AddProductosTable extends Migration
             $table->string('nombre');
             $table->string('imagen');
             $table->string('orden');
-            $table->string('ficha');
+            $table->string('ficha')->nullable();
             $table->string('contenido');
             $table->integer('categoria_id')->unsigned();
 

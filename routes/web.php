@@ -59,4 +59,18 @@ Route::prefix('adm')->group(function () {
         'as'   => 'clientes.destroy',
 
     ]);
+
+    /*------------CATEGORIAS----------------*/
+    Route::resource('categorias', 'adm\CategoriasController');
+
+    /*------------PRODUCTOS----------------*/
+    Route::resource('productos', 'adm\ProductosController');
+    // Rutas de reportes pdf
+    Route::get('pdf/{id}', ['uses' => 'adm\ProductosController@downloadPdf', 'as' => 'file-pdf']);
+
+    /*------------CATEGORIAS----------------*/
+    Route::resource('cat-obras', 'adm\CatObrasController');
+
+    /*------------PRODUCTOS----------------*/
+    Route::resource('obras', 'adm\ObrasController');
 });

@@ -177,3 +177,8 @@ select option{
 .servicios img{
   background-color: #32398E;
 }
+
+form .btn input {
+    padding: 0 2rem!important;
+    height: 100%!important;
+}
