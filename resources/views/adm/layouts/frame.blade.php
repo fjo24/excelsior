@@ -81,6 +81,14 @@
                 </ul>
               </div>
             </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">user</i>Clientes</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="{{route('clientes.create')}}">Crear cliente</a></li>
+                  <li><a href="{{route('clientes.index')}}">Editar cliente</a></li>
+                </ul>
+              </div>
+            </li>
             
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">business</i>Mantenimiento</a>
               <div class="collapsible-body">

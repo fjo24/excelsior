@@ -52,4 +52,11 @@ Route::prefix('adm')->group(function () {
     /*------------EMPRESA----------------*/
     Route::resource('empresas', 'adm\EmpresasController');
 
+    /*------------CLIENTES----------------*/
+    Route::resource('clientes', 'adm\ClientesController');
+    Route::delete('clientes/{id}/destroy', [
+        'uses' => 'adm\ClientesController@destroy',
+        'as'   => 'clientes.destroy',
+
+    ]);
 });

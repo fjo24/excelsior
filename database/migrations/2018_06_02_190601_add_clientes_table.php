@@ -16,6 +16,7 @@ class AddClientesTable extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
+            $table->string('link');
             $table->string('imagen');
             $table->timestamps();
         });
