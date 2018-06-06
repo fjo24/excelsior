@@ -68,9 +68,21 @@ Route::prefix('adm')->group(function () {
     // Rutas de reportes pdf
     Route::get('pdf/{id}', ['uses' => 'adm\ProductosController@downloadPdf', 'as' => 'file-pdf']);
 
-    /*------------CATEGORIAS----------------*/
+    /*------------CATEGORIAS DE OBRAS----------------*/
     Route::resource('cat-obras', 'adm\CatObrasController');
 
-    /*------------PRODUCTOS----------------*/
+    /*------------OBRAS----------------*/
     Route::resource('obras', 'adm\ObrasController');
+
+    /*   /*------------IMAGEN\OBRAS----------------*/
+    /*-------imagenes modelos----------*/
+    Route::get('/obras/imagenes/{obra_id}', 'adm\ObrasController@imagenes')->name('imagenobra');
+//agregar nuevas imagenes de productos
+    Route::post('obras/{id}/imagen/', 'adm\ObrasController@nuevaimagen')->name('nuevaimagen');
+    Route::post('obras/imagenes/{id}/', 'adm\ObrasController@nuevaimagen')->name('imagenobra');
+    Route::delete('obras/{id}/destroy', [
+        'uses' => 'adm\ObrasController@destroyimg',
+        'as'   => 'imgmodelo.destroy',
+    ]);
+
 });

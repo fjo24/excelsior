@@ -254,12 +254,12 @@
                         <div class="collapsible-body">
                             <ul>
                                 <li>
-                                    <a href="{{route('obras.create')}}">
+                                    <a href="{{route('cat-obras.create')}}">
                                         Crear categoria obra
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{route('obras.index')}}">
+                                    <a href="{{route('cat-obras.index')}}">
                                         Editar categoria obra
                                     </a>
                                 </li>

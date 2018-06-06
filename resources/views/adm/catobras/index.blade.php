@@ -27,7 +27,7 @@
                     Imagen
                 </td>
                 <td>
-                    titulo
+                    Nombre
                 </td>
                 <td>
                     Orden
@@ -43,18 +43,18 @@
                         <img alt="seccion" height="300" src="{{ asset($categoria->imagen) }}" width="300"/>
                     </td>
                     <td>
-                        {!!$categoria->titulo!!}
+                        {!!$categoria->nombre!!}
                     </td>
                     <td>
                         {!!$categoria->orden!!}
                     </td>
                     <td class="text-right">
-                        <a href="{{ route('categorias.edit',$categoria->id)}}">
+                        <a href="{{ route('cat-obras.edit',$categoria->id)}}">
                             <i class="material-icons">
                                 create
                             </i>
                         </a>
-                        {!!Form::open(['class'=>'en-linea', 'route'=>['categorias.destroy', $categoria->id], 'method' => 'DELETE'])!!}
+                        {!!Form::open(['class'=>'en-linea', 'route'=>['cat-obras.destroy', $categoria->id], 'method' => 'DELETE'])!!}
                         <button class="submit-button" onclick="return confirm('¿Realmente deseas borrar la categoria?')" type="submit">
                             <i class="material-icons red-text">
                                 cancel

@@ -11,8 +11,8 @@ class Obra_imagen extends Model
         'imagen', 'obra_id',
     ];
 
-    public function producto()
+    public function obra()
     {
-        return $this->belongsTo('App\Producto');
+        return $this->belongsTo('App\Obra');
     }
 }

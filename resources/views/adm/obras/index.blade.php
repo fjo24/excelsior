@@ -1,6 +1,6 @@
 @extends('adm.layouts.frame')
 
-@section('titulo', 'Categoria de productos')
+@section('titulo', 'Listado de obras')
 
 @section('contenido')
 	    @if(count($errors) > 0)
@@ -24,38 +24,48 @@
         <table class="highlight bordered">
             <thead>
                 <td>
-                    Imagen
+                    Titulo
                 </td>
                 <td>
-                    titulo
+                    Subtitulo
                 </td>
                 <td>
-                    Orden
+                    Categoria
+                </td>
+                <td>
+                    Administrar imagenes
                 </td>
                 <td class="text-right">
                     Acciones
                 </td>
             </thead>
             <tbody>
-                @foreach($categorias as $categoria)
+                @foreach($obras as $obra)
                 <tr>
                     <td>
-                        <img alt="seccion" height="300" src="{{ asset($categoria->imagen) }}" width="300"/>
+                        {{ $obra->titulo }}
                     </td>
                     <td>
-                        {!!$categoria->titulo!!}
+                        {{ $obra->subtitulo }}
                     </td>
                     <td>
-                        {!!$categoria->orden!!}
+                        {{ $obra->categoria_obra->titulo }}
+                    </td>
+                    <td>
+                        <a href="{{ route('imagenobra',$obra->id)}}">
+                            <i class="material-icons">
+                                image
+                            </i>
+                        </a>
                     </td>
                     <td class="text-right">
-                        <a href="{{ route('categorias.edit',$categoria->id)}}">
+                        <a href="{{ route('obras.edit',$obra->id)}}">
                             <i class="material-icons">
                                 create
                             </i>
                         </a>
-                        {!!Form::open(['class'=>'en-linea', 'route'=>['categorias.destroy', $categoria->id], 'method' => 'DELETE'])!!}
-                        <button class="submit-button" onclick="return confirm('¿Realmente deseas borrar la categoria?')" type="submit">
+                        {!!Form::open(['class'=>'en-linea', 'route'=>['obras.destroy', $obra->id], 'method' => 'DELETE'])!!}
+                        <button class="submit-button" onclick="return confirm('¿Realmente deseas borrar la obra?')" type="submit">
                             <i class="material-icons red-text">
                                 cancel
                             </i>
@@ -68,6 +78,4 @@
         </table>
     </div>
 </div>
-<script src="{{ asset('js/eliminar.js') }}" type="text/javascript">
-</script>
 @endsection
