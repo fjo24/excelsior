@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
- */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -75,14 +64,22 @@ Route::prefix('adm')->group(function () {
     Route::resource('obras', 'adm\ObrasController');
 
     /*   /*------------IMAGEN\OBRAS----------------*/
-    /*-------imagenes modelos----------*/
-    Route::get('/obras/imagenes/{obra_id}', 'adm\ObrasController@imagenes')->name('imagenobra');
-//agregar nuevas imagenes de productos
-    Route::post('obras/{id}/imagen/', 'adm\ObrasController@nuevaimagen')->name('nuevaimagen');
-    Route::post('obras/imagenes/{id}/', 'adm\ObrasController@nuevaimagen')->name('imagenobra');
-    Route::delete('obras/{id}/destroy', [
+    /*-------imagenes obras----------*/
+    Route::get('/obras/imagenes/{obra_id}', 'adm\ObrasController@imagenes')->name('imagenobra'); //index del modulo imagenes
+    //agregar nuevas imagenes de productos
+    Route::post('obras/{id}/imagen/', 'adm\ObrasController@nuevaimagen')->name('nuevaimagen'); //es el store de las imagenes
+    Route::delete('imagen_obras/{id}/destroy', [ //eliminar imagenes
         'uses' => 'adm\ObrasController@destroyimg',
-        'as'   => 'imgmodelo.destroy',
+        'as'   => 'imgobras.destroy',
     ]);
+
+    /*------------CONSEJOS----------------*/
+    Route::resource('consejos', 'adm\ConsejosController');
+
+    /*------------DATOS----------------*/
+    Route::resource('datos', 'adm\DatosController');
+
+    /*------------METADATOS----------------*/
+    Route::resource('metadatos', 'adm\MetadatosController');
 
 });

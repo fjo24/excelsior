@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ObrasRequest;
 use App\Obra;
 use App\Obra_imagen;
+use Illuminate\Http\Request;
 
 class ObrasController extends Controller
 {
@@ -32,19 +33,19 @@ class ObrasController extends Controller
         $obra->orden             = $request->orden;
         $id                      = Obra::all()->max('id');
         $id++;
+        $obra->save();
         if ($request->HasFile('file')) {
             foreach ($request->file as $file) {
                 $filename = $file->getClientOriginalName();
                 $path     = public_path('img/obra/');
                 $file->move($path, $id . '_' . $file->getClientOriginalName());
-                $imagen              = new Obra_imagen;
-                $imagen->ubicacion   = 'img/obra/' . $id . '_' . $file->getClientOriginalName();
-                $imagen->producto_id = $id;
+                $imagen          = new Obra_imagen;
+                $imagen->imagen  = 'img/obra/' . $id . '_' . $file->getClientOriginalName();
+                $imagen->obra_id = $id;
                 $imagen->save();
             }
         }
 
-        $obras->save();
         return redirect()->route('obras.index');
     }
 
@@ -56,7 +57,7 @@ class ObrasController extends Controller
     public function edit($id)
     {
         $categorias = Categoria_obra::orderBy('titulo', 'ASC')->pluck('titulo', 'id')->all();
-        $obra   = Obra::find($id);
+        $obra       = Obra::find($id);
         return view('adm.obras.edit', compact('obra', 'categorias'));
     }
 
@@ -68,21 +69,20 @@ class ObrasController extends Controller
         $obra->tareas            = $request->tareas;
         $obra->categoria_obra_id = $request->categoria_obra_id;
         $obra->orden             = $request->orden;
-        $id                      = Obra::all()->max('id');
-        $id++;
+
+        $obra->save();
         if ($request->HasFile('file')) {
             foreach ($request->file as $file) {
                 $filename = $file->getClientOriginalName();
                 $path     = public_path('img/obra/');
                 $file->move($path, $id . '_' . $file->getClientOriginalName());
-                $imagen              = new Obra_imagen;
-                $imagen->ubicacion   = 'img/obra/' . $id . '_' . $file->getClientOriginalName();
-                $imagen->producto_id = $id;
+                $imagen          = new Obra_imagen;
+                $imagen->imagen  = 'img/obra/' . $id . '_' . $file->getClientOriginalName();
+                $imagen->obra_id = $id;
                 $imagen->save();
             }
         }
 
-        $obra->save();
         return redirect()->route('obras.index');
     }
 
@@ -97,7 +97,7 @@ class ObrasController extends Controller
     {
         $imagenes = Obra_imagen::orderBy('id', 'ASC')->Where('obra_id', $id)->get();
 
-        $obra=Obra::find($id);
+        $obra = Obra::find($id);
         return view('adm.obras.imagenes')->with(compact('imagenes', 'obra'));
     }
 
@@ -122,12 +122,12 @@ class ObrasController extends Controller
 
     public function destroyimg($id)
     {
-        $imagen = Imgproducto::find($id);
-        $idpro  = $imagen->producto_id;
+        $imagen = Obra_imagen::find($id);
+        $idobra = $imagen->obra_id;
         $imagen->delete();
-        $imagenes = Imgproducto::orderBy('id', 'ASC')->Where('producto_id', $idpro)->get();
+        $imagenes = Obra_imagen::orderBy('id', 'ASC')->Where('obra_id', $idobra)->get();
 
-        $producto = producto::find($idpro);
-        return view('adm.productos.imagenes')->with(compact('imagenes', 'producto'));
+        $obra = Obra::find($idobra);
+        return view('adm.obras.imagenes')->with(compact('imagenes', 'obra'));
     }
 }

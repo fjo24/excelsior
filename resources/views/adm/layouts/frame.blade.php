@@ -293,6 +293,28 @@
                             </ul>
                         </div>
                     </li>
+                    <li class="bold">
+                        <a class="collapsible-header waves-effect waves-admin">
+                            <i class="material-icons">
+                                lightbulb_outline
+                            </i>
+                            Consejos
+                        </a>
+                        <div class="collapsible-body">
+                            <ul> 
+                                <li>
+                                    <a href="{{route('consejos.create')}}">
+                                        Crear consejo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('consejos.index')}}">
+                                        Editar consejo
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                     {{--
                     <li class="bold">
                         <a class="collapsible-header waves-effect waves-admin">
@@ -322,8 +344,25 @@
                         <div class="collapsible-body">
                             <ul>
                                 <li>
-                                    <a href="">
+                                    <a href="{{route('datos.index')}}">
                                         Editar datos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bold">
+                        <a class="collapsible-header waves-effect waves-admin">
+                            <i class="material-icons">
+                                pin_drop
+                            </i>
+                            Metadatos
+                        </a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>
+                                    <a href="{{route('metadatos.index')}}">
+                                        Editar Metadatos
                                     </a>
                                 </li>
                             </ul>
@@ -351,25 +390,7 @@
                             </ul>
                         </div>
                     </li>
-                    {{--
-                    <li class="bold">
-                        <a class="collapsible-header waves-effect waves-admin">
-                            <i class="material-icons">
-                                pin_drop
-                            </i>
-                            Metadatos
-                        </a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li>
-                                    <a href="{{route('metadatos.index')}}">
-                                        Editar Metadatos
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    --}}
+                    
                     <!--    @if(Auth::user())
                 @if(Auth::user()->nivel === 'administrador')
               <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">account_circle</i>Usuarios</a>
