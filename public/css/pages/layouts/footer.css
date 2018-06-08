@@ -1,110 +1,57 @@
- footer {
- 	background: url(/img/layouts/img-fondo.png);
- 	background-repeat: no-repeat;
- 	background-position: center;
- 	font-family: 'Source Sans Pro', sans-serif;
- 	font-size: 16px;
- 	display: flex;
-	align-items: center;
-	justify-content: space-around;
-
- }
-
-.footer-box{
-	color: #000;
-	position: relative;
-	height: 246px;
-	background-color: #171B42;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 16px;
-	bottom: 0px;
-	box-shadow: 0 0px 0px -0px rgba(0,0,0,.0);
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+.page-footer {
+    height: 265px;
+    background-color: #111111!important;
+}
+footer .logfooter {
+    
+}
+footer .titulo-footer {
+    font-family: 'Raleway';
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 90px;
+}
+footer .links {
+    padding-left: 78px;
+}
+footer .listlinks {
+    font-family: 'Raleway';
+    color: #ffffff;
+    font-size: 15px;
 }
 
-.item-footer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.sitemap a, h5, div{
-	color: white;
-	font-size: 16px;
+footer .listlinks li{
+	margin-bottom: 10px;
+	font-family: 'Raleway';
 }
 
-
-
-.sitemap a{
-	padding-top: -50%;
-	padding-bottom: -30%;
-	line-height: 33px;
-	height: 50%
-}
-
-.sitemap a:hover{
-	color: #32398E;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-.sitemap{
-	position: absolute;
+footer .row .col.l6 {
 	width: 40%;
-	top:13%;
-	left: 7%;
-	padding-right: 20px;
 }
 
-
-
-.company img{
-	filter: invert(1);
+footer .leftitems{
+	position: relative;
+	top: 3px;
+	left: -14px!important;
 }
 
-table{
-	border-collapse: separate;
-  	border-spacing: 0px 5px;
+footer .rightitems{
+	position: relative;
+	top: -4px;
+	left: -14px!important;
 }
 
-.linea{
-	position: absolute;
-	width: 107%;
-	height: .01px;
-	top:65%;
-	left: 300px;
+footer .links2 {
+    padding-left: 78px;
 }
-.company a{
-	color: white;
+footer .listlinks2 {
+    font-family: 'Raleway';
+    color: #ffffff;
+    font-size: 15px;
 }
 
-.datos{
-	position: absolute;
-	width: 20%;
-	height: 70%;
-	top:20px;
-	right: 4%;
-	padding-left: 0px;
-	margin-right: 0px;
-	font-size: 16px;
-}
-
-.line{
-	position: absolute;
-	padding-left: 0%;
-	padding-right: 0%;	
-	right: 48%;
-	bottom: 90%;
-}
-
-.datos a{
-	color: white;
-}
-
-footer span{
-	font-weight: bold;
-	color: white;
-	font-size: 16px;
+footer .rightlist{
+	margin-bottom: 5px;
+	font-family: 'Raleway';
 }

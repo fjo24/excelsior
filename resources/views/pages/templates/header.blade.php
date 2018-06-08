@@ -24,9 +24,15 @@
                 </div>
                 <div class="li-presupuesto">
                     <a href="">
-                        <img alt="" src="{{asset('img/generico/correo2.png')}}" style="margin-right: 0px;">
+                        <img alt="" src="{{asset('img/layouts/correo2.png')}}" style="margin-right: 0px;">
                             SOLICITUD DE PRESUPUESTO
                         </img>
+                    </a>
+                </div>
+                <div class="li-telefono">
+                    <a href="">
+                        <i class="material-icons" style="margin-right: 7px;">phone_in_talk</i>
+                           <span class="numero">15-6392-2724</span>
                     </a>
                 </div>
             </div>
@@ -56,7 +62,7 @@
                     </img>
                 </a>
                 <a class="sidenav-trigger" data-target="mobile-demo" href="#">
-                    <i class="material-icons">
+                    <i class="material-icons center" style="background-color: gray; width: 150%">
                         menu
                     </i>
                 </a>

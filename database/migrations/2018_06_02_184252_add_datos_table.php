@@ -15,7 +15,7 @@ class AddDatosTable extends Migration
     {
         Schema::create('datos', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('tipo', ['direccion', 'telefono', 'email']);
+            $table->enum('tipo', ['direccion', 'telefono', 'telefono2', 'telurgencia', 'email']);
             $table->string('descripcion', 1000);
             $table->timestamps();
         });

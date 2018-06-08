@@ -1,170 +1,126 @@
-<footer class="footer-box">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="block1">
-                <div class="sitemap hide-on-med-and-down">
-                    <div class="col l6 s12">
-                        <div class="s6">
-                            <span style="padding-left: 12px;">
-                                SITEMAP
-                            </span>
-                        </div>
-                        <div class="s6">
-                        </div>
-                        <div class="col 3 s4">
-                            <ul>
-                                <li>
-                                    <a href="/">
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/empresa">
-                                        Empresa
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="productos">
-                                        Productos
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/servicios">
-                                        Servicios
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col 3 s6">
-                            <ul>
-                                <li>
-                                    <a href="/fabrica">
-                                        Fábrica
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/obra">
-                                        Obras
-                                    </a>
-                                </li>
-                                <li style="line-height: 0px!important;">
-                                    <a href="/presupuesto" style="height: 10px!important;line-height: 16px;">
-                                        Solicitud de presupuesto
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/contacto">
-                                        Contacto
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+<footer class="page-footer">
+    <div class="container" style="width: 100%">
+        <div class="row" style="display:  flex; align-items:  center;">
+            <div class="leftitems col l4 s12 m4 hide-on-med-and-down">
+                <h5 class="titulo-footer">
+                    SITEMAP
+                </h5>
+                <div class="links">
+                    <div class="listlinks col l6 m6">
+                        <ul>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">
+                                    Mantenimiento
+                                </a>
+                            </li>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">
+                                    Productos
+                                </a>
+                            </li>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">
+                                    Empresa
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="listlinks col l6 m6">
+                        <ul style="">
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">
+                                    Consejos de Seguridad
+                                </a>
+                            </li>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">
+                                    Obras
+                                </a>
+                            </li>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">
+                                    Clientes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">
+                                    Contacto
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="company hide-on-med-and-down">
-                <div class="top row">
-                    <div class="col l12 s12">
-                        <div class="col l3 s12 center">
-                            <a class="iconos-redes" href="">
-                                <img src="{{asset('img/layouts/empresa1.png')}}"/>
-                            </a>
-                        </div>
-                        <div class="col l3 s12 center">
-                            <a class="iconos-redes" href="">
-                                <img "="" src="{{asset('img/layouts/logo-hidro.png')}}"/>
-                            </a>
-                        </div>
-                        <div class="col l3 s12 center">
-                            <a class="iconos-redes" href="">
-                                <img src="{{asset('img/layouts/logo-2.png')}}"/>
-                            </a>
-                        </div>
-                        <div class="col l3 s12 center">
-                            <a class="iconos-redes" href="">
-                                <img src="{{asset('img/layouts/empresa4.png')}}"/>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="linea row">
-                        <div class="col l12 s12">
-                            <a class="line" href="" style="filter: invert(1);">
-                                <img src="{{asset('img/layouts/linea.png')}}"/>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col l12 s12">
-                        <table style="width: 95%; margin-left: 10%">
-                            <th style=" padding-right: 0px; margin-right: 0; width: 5%;">
-                                <span>
-                                    VISITANOS TAMBIEN
-                                </span>
-                            </th>
-                            <th style="filter: invert(1); padding-left: -20px; padding-right: -20px; width: 1%">
-                                <img src="{{asset('img/layouts/barra.png')}}"/>
-                            </th>
-                            <th style="filter: invert(1); padding-left: -50px; margin-left: -20; padding-right: 0px; margin-right: 0; width: 1%;">
-                                <a class="iconos-redes" href="https://www.facebook.com/tolosaaberturassanjusto/">
-                                    <img src="{{asset('img/layouts/facebook_footer.png')}}"/>
-                                </a>
-                            </th>
-                            <th style="filter: invert(1); padding-right: 0px; margin-right: 0px;width: 1%">
-                                <a class="iconos-redes" href="https://listado.mercadolibre.com.ar/_CustId_61833305">
-                                    <img src="{{asset('img/layouts/ml_manos.png')}}"/>
-                                </a>
-                            </th>
-                            <th style="filter: invert(1); padding-left: 0px; margin-left: 0; padding-right: 0px; margin-right: 0; width: 3%;">
-                                <a class="iconos-redes" href="https://listado.mercadolibre.com.ar/_CustId_61833305">
-                                    <img src="{{asset('img/layouts/ml.png')}}"/>
-                                </a>
-                            </th>
-                        </table>
+            <div class="col l4 s12 m4">
+                <div class="row">
+                    <div class="logfooter center">
+                        <img alt="" src="{{asset('img/layouts/logo-footer.png')}}">
+                        </img>
                     </div>
                 </div>
             </div>
-            <div class="datos hide-on-med-and-down">
-                <div class="col 22 s12">
-                    <span style="padding-left: 25px">
-                        ABERTURAS TOLOSA
-                    </span>
-                    <ul>
-                        <li class="item-footer">
-                            <i class="material-icons">
-                                place
-                            </i>
-                            <a href="" style="text-transform: none;">
-                                Parral 3328 I San Justo
-Buenos Aires I Argentina
-                            </a>
-                        </li>
-                        <li class="item-footer">
-                            <i class="material-icons">
-                                phone_in_talk
-                            </i>
-                            <a href="" style="text-transform: none;">
-                                (+54-011)  4691 4389 I 2087 8329
-                            </a>
-                        </li>
-                        <li class="item-footer">
-                            <i class="material-icons">
-                                av_timer
-                            </i>
-                            <a href="" style="text-transform: none;">
-                                L a V 8-13 / 15-18:30 y S 8-13
-                            </a>
-                        </li>
-                        <li class="item-footer">
-                            <i class="material-icons">
-                                email
-                            </i>
-                            <a href="/contacto" style="text-transform: none;">
-                                tolosaaberturas@hotmail.com
-                            </a>
-                        </li>
-                    </ul>
+            <div class="rightitems col l4 s12 m4 hide-on-med-and-down left">
+                <h5 class="titulo-footer">
+                    EXCELSIOR S.A.
+                </h5>
+                <div class="links2">
+                    <div class="listlinks2 col l12 m12">
+                        <ul>
+                            <li>
+                                <div class="row rightlist">
+                                    <div class="col s1">
+                                        <img alt="" src="{{asset('img/layouts/ubicacion.png')}}">
+                                        </img>
+                                    </div>
+                                    <div class="col s11">
+                                        {{$direccion->descripcion}}
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row rightlist">
+                                    <div class="col s1">
+                                        <img alt="" src="{{asset('img/layouts/telefono.png')}}">
+                                        </img>
+                                    </div>
+                                    <div class="col s11">
+                                        {{$telefono->descripcion}}
+                                    |
+                                        {{$telefono2->descripcion}}
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row rightlist">
+                                    <div class="col s1">
+                                        <img alt="" src="{{asset('img/layouts/urgencias.png')}}">
+                                        </img>
+                                    </div>
+                                    <div class="col s11">
+                                        {{$telurgencia->descripcion}}
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row rightlist">
+                                    <div class="col s1">
+                                        <img alt="" src="{{asset('img/layouts/email.png')}}">
+                                        </img>
+                                    </div>
+                                    <div class="col s11">
+                                        {{$email->descripcion}}
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-<!--/.Footer-->
