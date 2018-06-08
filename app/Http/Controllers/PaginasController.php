@@ -2,22 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Categoria;
-use App\Contenidoempresa;
-use App\Empresa;
-use App\Fabrica;
-use App\Home;
-use App\Imgproducto;
-use App\Imgtipo;
-use App\Imgvidrio;
-use App\Mail\sendmail;
-use App\Modelo;
-use App\Obra;
-use App\Producto;
-use App\Servicio;
 use App\Slider;
-use App\Tipoventana;
-use App\Tipovidrio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -27,7 +12,9 @@ class PaginasController extends Controller
 {
     public function home()
     {
-        return view('pages.home');
+        $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'home')->get();
+      //  $contenido = Contenidoempresa::all()->first();
+        return view('pages.home', compact('sliders', 'contenido'));
     }
 
     public function empresa()

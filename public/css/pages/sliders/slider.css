@@ -1,0 +1,29 @@
+.box-cap {
+	position: absolute!important;
+    top: 161px!important;
+    left: 263px!important;
+    background-color: rgba(250, 0, 0, 0.8);
+    border-top: 6px solid rgba(80, 79, 83, 0.8);
+    width: 846px!important;
+    height: 180px;
+    line-height: 100%; 
+    font-family: 'Raleway';
+}
+
+.slidertext1{
+	position: relative;
+	top: 50px;
+	font-family: 'Raleway'; 
+	font-size: 60px;
+	font-weight: 700;
+	padding: 3%;
+}
+.slidertext2{
+	position: relative;
+	top: 50px;
+	padding: 10px!important;
+	font-family: 'Raleway'; 
+	font-size: 45px;
+	font-weight: lighter;
+	padding: 3%;
+}

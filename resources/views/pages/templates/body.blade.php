@@ -35,9 +35,7 @@
             @include('pages.templates.header')
         </header>
         <main style="">
-            <div class="container">
-                @yield('contenido')
-            </div>
+            @yield('contenido')
         </main>
         @include('pages.templates.footer')
         <!--Import jQuery before materialize.js-->
