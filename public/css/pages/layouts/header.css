@@ -1,0 +1,82 @@
+.top {
+    background-color: #504F53;
+    border-bottom: 3px solid #FF0000;
+    height: 38px;
+}
+
+header .list-top {
+margin: 0px 121px;
+}
+
+header .li-contacto a {
+    font-family: 'Raleway';
+    color: #DDDDDD;
+    font-size: 15px;
+}
+header .li-contacto {
+    background-color: transparent;
+    border-radius: 0px;
+    float: right;
+    height: 35px;
+    width: 145px;
+    display: flex;
+    justify-content: center;
+    /* horizontal*/
+    align-items: center;
+    /*vertical*/
+    border-right: 2px solid #777777;
+}
+header .li-presupuesto a {
+    font-family: 'Raleway';
+    color: #DDDDDD;
+    font-size: 15px;
+}
+header .li-presupuesto {
+    background-color: transparent;
+    border-radius: 0px;
+    float: right;
+    height: 35px;
+    width: 243px;
+    display: flex;
+    justify-content: center;
+    /* horizontal*/
+    align-items: center;
+    /*vertical*/
+    border-right: 2px solid #777777;
+    border-left: 2px solid #777777;
+}
+header .li-red {
+    background-color: transparent;
+    border-radius: 0px;
+    list-style: none;
+    float: right;
+    height: 35px;
+    width: 35px;
+    border-right: 2px solid #777777;
+    display: flex;
+    justify-content: center;
+    /* horizontal*/
+    align-items: center;
+    /*vertical*/
+}
+
+header .principal {
+	height: 147px!important;
+	background-color: orange;
+	font-family: 'Raleway';
+}
+
+nav ul a {
+    color: #525254!important;
+    font-size: 16px!important;
+	
+}
+nav .brand-logo{
+	top: 16px;
+	height: 113px!important;
+}
+
+nav ul a:hover{
+	background-color:transparent!important;
+	color:#FF0000;
+}
