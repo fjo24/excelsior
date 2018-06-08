@@ -33,7 +33,8 @@
         </div>
         {{-- BARRA PRINCIPAL --}}
         <nav class="principal">
-                <ul class="left hide-on-med-and-down">
+            <div class="container" style="width: 90%">
+                <ul class="item-left left hide-on-med-and-down">
                     <li>
                         <a href="sass.html">
                             MANTENIMIENTO
@@ -59,7 +60,7 @@
                         menu
                     </i>
                 </a>
-                <ul class="right hide-on-med-and-down">
+                <ul class="item-right right hide-on-med-and-down">
                     <li>
                         <a href="badges.html">
                             CONSEJOS DE SEGURIDAD
@@ -76,6 +77,7 @@
                         </a>
                     </li>
                 </ul>
+            </div>
         </nav>
         <ul class="sidenav" id="mobile-demo">
             <li>

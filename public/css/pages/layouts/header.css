@@ -62,14 +62,14 @@ header .li-red {
 
 header .principal {
 	height: 147px!important;
-	background-color: orange;
+	background-color: yellow;
 	font-family: 'Raleway';
 }
 
 nav ul a {
     color: #525254!important;
     font-size: 16px!important;
-	
+    font-family: 'Raleway';
 }
 nav .brand-logo{
 	top: 16px;
@@ -78,5 +78,20 @@ nav .brand-logo{
 
 nav ul a:hover{
 	background-color:transparent!important;
-	color:#FF0000;
+	color:#FF0000!important;
+    font-family: 'Raleway';
+}
+
+nav .item-left{
+    position: relative;
+    top: 30px;
+    word-spacing: 10px;
+    font-family: 'Raleway';
+}
+
+nav .item-right{
+    position: relative;
+    top: 30px;
+    word-spacing: 10px;
+    font-family: 'Raleway';
 }

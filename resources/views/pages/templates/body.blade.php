@@ -10,16 +10,17 @@
                                 Excelsior - @yield('titulo')
                             </title>
                             <link href="{{asset('img/favicon.png')}}" rel="icon" type="image/png"/>
-                    
-<link rel="stylesheet" href="{{ asset('css/pages/layouts/header.css') }}">
-
-                            @yield('css')
-                            <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
-                            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-                                <link href="{{ asset('plugins/materialize/css/materialize.min.css') }}" rel="stylesheet">
-                                    <script src="//code.jquery.com/jquery-1.11.1.min.js">
-                                    </script>
-                                    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+                            <link href="{{ asset('css/pages/layouts/header.css') }}" rel="stylesheet">
+                                <link href="{{ asset('css/pages/layouts/footer.css') }}" rel="stylesheet">
+                                    @yield('css')
+                                    <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"/>
+                                    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                                        <link href="{{ asset('plugins/materialize/css/materialize.min.css') }}" rel="stylesheet">
+                                            <script src="//code.jquery.com/jquery-1.11.1.min.js">
+                                            </script>
+                                            <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+                                        </link>
+                                    </link>
                                 </link>
                             </link>
                         </meta>
@@ -38,6 +39,7 @@
                 @yield('contenido')
             </div>
         </main>
+        @include('pages.templates.footer')
         <!--Import jQuery before materialize.js-->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript">
         </script>
@@ -46,8 +48,7 @@
         </script>
         @yield('js')
         <script type="text/javascript">
-
-$(document).ready(function(){
+            $(document).ready(function(){
     $('.sidenav').sidenav();
     $(".dropdown-trigger").dropdown();
     $('.collapsible').collapsible();
