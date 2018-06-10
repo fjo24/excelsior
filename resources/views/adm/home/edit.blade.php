@@ -45,12 +45,17 @@
 				    </div>
 				    <label class="col l12 s12" for="parrafo">Contenido</label>
 				    <div class="input-field col s12">
-				        <textarea id="texto3" name="contenido" class="materialize-textarea" required>{{$home->contenido}}</textarea>
+				        <textarea id="texto3" name="contenido" class="materialize-textarea" required>{!!$home->contenido!!}</textarea>
 				    </div>
 				</div>
-				<div class="col s12 no-padding">
-					{!!Form::submit('Guardar', ['class'=>'waves-effect waves-light btn right'])!!}
-				</div>
+				<div class="col l12 s12 no-padding">
+                    <button class="btn-large waves-effect waves-light red right" name="action" type="submit">
+                        Editar
+                        <i class="material-icons right">
+                            send
+                        </i>
+                    </button>
+                </div>
 			{!!Form::close()!!} 
 			</div>
 			</div>

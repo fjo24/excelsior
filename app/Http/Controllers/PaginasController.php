@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Banner;
+use App\Destacado_home;
+use App\Servicio;
 use App\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -13,8 +16,10 @@ class PaginasController extends Controller
     public function home()
     {
         $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'home')->get();
-      //  $contenido = Contenidoempresa::all()->first();
-        return view('pages.home', compact('sliders', 'contenido'));
+        $servicios = Servicio::OrderBy('orden', 'ASC')->get();
+        $banner    = Banner::all()->first();
+        $contenido = Destacado_home::all()->first();
+        return view('pages.home', compact('sliders', 'servicios', 'banner', 'contenido'));
     }
 
     public function empresa()

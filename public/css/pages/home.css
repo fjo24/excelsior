@@ -1,0 +1,37 @@
+.seccion-banner{
+	background: url(/img/home/banner/fondohome.png);
+	height: 333px;
+	width: 100%;
+}
+
+.btexto{
+	padding-top: 95px;
+	line-height: 10px;
+}
+
+.tbanner{
+	color: #FFFFFF;
+	font-family: 'Raleway';
+	font-size: 40px;
+}
+
+.tbanner2{
+	color: #FFFFFF;
+	font-family: 'Raleway';
+	font-size: 40px;
+}
+.tbanner3{
+	color: #FFFFFF;
+	font-family: 'Raleway';
+	font-size: 40px;
+}
+
+.img-destacado{
+	width: 533px; 
+	height: 368px;
+}
+
+.destacado-home{
+	margin-top: 86px;
+	margin-bottom: 86px;
+}

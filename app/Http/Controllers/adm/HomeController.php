@@ -77,8 +77,8 @@ class HomeController extends Controller
             if ($request->file('imagen')->isValid()) {
                 $file = $request->file('imagen');
                 $path = public_path('img/home/banner/');
-                $request->file('imagen')->move($path, $id . '_' . $file->getClientOriginalName());
-                $dato->imagen = 'img/home/banner/' . $id . '_' . $file->getClientOriginalName();
+                $request->file('imagen')->move($path, 'fondohome.png');
+                $dato->imagen = 'img/home/banner/fondohome.png';
             }
         }
         $dato->update();

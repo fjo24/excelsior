@@ -52,25 +52,6 @@
         </hr>
     </div>
 </div>
-<div class="seccion-banner">
-    <div class="btexto">
-        <div class="tbanner center">
-            <p>
-                {!! $banner->texto !!}
-            </p>
-        </div>
-        <div class="tbanner2 center">
-            <p>
-                {!! $banner->texto2 !!}
-            </p>
-        </div>
-        <div class="tbanner3 center">
-            <p>
-                {!! $banner->texto3 !!}
-            </p>
-        </div>
-    </div>
-</div>
 <div class="container" style="width: 84%;">
     <div class="destacado-home">
         <div class="row" style="">

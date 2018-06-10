@@ -1,0 +1,44 @@
+.servicios{
+	padding-top: 50px;
+}
+
+.titulo-servicio{
+	text-align:center;
+	color: #FF0000;
+	font-family: 'Raleway';
+	font-size: 29px;
+}
+
+.img-servicio{
+	padding-top: 42px;
+	height: 100%;
+}
+
+.items-servicio{
+	margin-top: 50px;
+}
+
+.texto-servicio{
+	text-align:center;
+	color: #FF0000;
+	font-family: 'Raleway';
+	font-size: 21px;
+	margin-top: 30px;
+}
+
+.mtto-line{
+	width: 100px;
+	height: 2px!important;
+	background-color: red!important;
+    margin-top: 10px;
+    border: 0px red;
+}
+
+.dest-line{
+	width: 100px;
+	height: 2px!important;
+	background-color: red!important;
+    margin-top: 10px;
+    margin-left: 0px;
+    border: 0px red;
+}

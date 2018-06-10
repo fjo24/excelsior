@@ -43,9 +43,14 @@
 				        <textarea id="texto3" name="texto3" class="materialize-textarea" required>{{$banner->texto3}}</textarea>
 				    </div>
 				</div>
-				<div class="col s12 no-padding">
-					{!!Form::submit('Guardar', ['class'=>'waves-effect waves-light btn right'])!!}
-				</div>
+				<div class="col l12 s12 no-padding">
+                    <button class="btn-large waves-effect waves-light red right" name="action" type="submit">
+                        Editar
+                        <i class="material-icons right">
+                            send
+                        </i>
+                    </button>
+                </div>
 			{!!Form::close()!!} 
 			</div>
 			</div>

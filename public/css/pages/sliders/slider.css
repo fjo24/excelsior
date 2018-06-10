@@ -1,3 +1,12 @@
+.slider .indicators .indicator-item.active{
+	background-color: rgba(201, 202, 201, 0.8)!important;
+}
+
+.slider .indicators .indicator-item {
+    bottom: 60px;
+    z-index: 7;
+}
+
 .box-cap {
 	position: absolute!important;
     top: 161px!important;
@@ -6,7 +15,8 @@
     border-top: 6px solid rgba(80, 79, 83, 0.8);
     width: 846px!important;
     height: 180px;
-    line-height: 100%; 
+    line-height: 250%; 
+    text-align: center;
     font-family: 'Raleway';
 }
 
@@ -14,8 +24,9 @@
 	position: relative;
 	top: 50px;
 	font-family: 'Raleway'; 
-	font-size: 60px;
-	font-weight: 700;
+	font-size: 55px;
+	font-weight: 900;
+	word-spacing: 23px;
 	padding: 3%;
 }
 .slidertext2{
@@ -23,7 +34,8 @@
 	top: 50px;
 	padding: 10px!important;
 	font-family: 'Raleway'; 
-	font-size: 45px;
-	font-weight: lighter;
+	font-size: 36px;
+	word-spacing: 10px;
+	font-weight: 100;
 	padding: 3%;
 }

@@ -14,6 +14,9 @@
 //HOME
 Route::get('/', 'PaginasController@home');
 
+//MANTENIMIENTO
+Route::get('/mantenimiento', 'PaginasController@mantenimiento');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
