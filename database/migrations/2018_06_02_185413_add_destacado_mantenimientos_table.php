@@ -16,7 +16,6 @@ class AddDestacadoMantenimientosTable extends Migration
         Schema::create('destacado_mantenimientos', function (Blueprint $table) {
             $table->increments('id');
             $table->text('titulo', 300);
-            $table->text('subtitulo', 500);
             $table->text('contenido', 2000);
             $table->string('link', 400)->nullable();
             $table->string('imagen');

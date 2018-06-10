@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Banner;
 use App\Destacado_home;
+use App\Destacado_mantenimiento;
 use App\Servicio;
 use App\Slider;
 use Illuminate\Http\Request;
@@ -20,6 +21,14 @@ class PaginasController extends Controller
         $banner    = Banner::all()->first();
         $contenido = Destacado_home::all()->first();
         return view('pages.home', compact('sliders', 'servicios', 'banner', 'contenido'));
+    }
+
+    public function mantenimiento()
+    {
+        $servicios = Servicio::OrderBy('orden', 'ASC')->get();
+        $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'mentenimiento')->get();
+        $contenido = Destacado_mantenimiento::all()->first();
+        return view('pages.mantenimiento', compact('sliders', 'servicios', 'contenido'));
     }
 
     public function empresa()

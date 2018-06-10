@@ -26,7 +26,6 @@ class MantenimientosController extends Controller
     {
         $dato            = Destacado_mantenimiento::find($id);
         $dato->titulo    = $request->titulo;
-        $dato->subtitulo = $request->subtitulo;
         $dato->contenido = $request->contenido;
         $dato->link      = $request->link;
         $id++;

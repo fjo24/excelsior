@@ -1,0 +1,31 @@
+.img-destacado{
+	width: 565px!important; 
+	height: 350px!important;
+}
+
+.destacado-mtto{
+	margin-top: 86px;
+	height: 594px;
+	background-color: #F6F6F6;
+	color: #989699;
+	font-family: 'Raleway';
+}
+
+.titulo-mtto p{
+	font-weight: 900!important;
+}
+
+.mtto-line{
+	position: relative;
+	bottom: 45px;
+}
+
+.mtto-line{
+	position: relative;
+	bottom: 45px;
+}
+
+.contenido-mtto{
+	position: relative;
+	bottom: -5px;	
+}

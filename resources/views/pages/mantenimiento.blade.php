@@ -3,7 +3,7 @@
 @section('css')
 <link href="{{ asset('css/pages/sliders/slider.css') }}" rel="stylesheet"/>
 <link href="{{ asset('css/pages/servicios.css') }}" rel="stylesheet"/>
-<link href="{{ asset('css/pages/home.css') }}" rel="stylesheet"/>
+<link href="{{ asset('css/pages/mantenimiento.css') }}" rel="stylesheet"/>
 @endsection
 @section('contenido')
 <div class="slider hide-on-med-and-down">
@@ -52,24 +52,24 @@
         </hr>
     </div>
 </div>
-<div class="container" style="width: 84%;">
-    <div class="destacado-home">
+<div class="destacado-mtto">
+    <div class="container" style="width: 90%;">
         <div class="row" style="">
-            <div class="col l6 s12 hide-on-med-and-down">
-                <img class="img-destacado responsive-img" src="{!! $contenido->imagen !!}" style="">
-                </img>
-            </div>
-            <div class="col l6 s12">
-                <p>
-                    {!! $contenido->titulo !!}
-                </p>
-                <hr class="dest-line">
-                <p>
-                    {!! $contenido->subtitulo !!}
-                </p>
-                <p>
-                    {!! $contenido->contenido !!}
-                </p>
+            <div class="contenido-mtto col l12">
+                <div class="titulo-mtto col l12 center">
+                    <h3 style="font-weight: 900!important;">
+                        {!! $contenido->titulo !!}
+                    </h3>
+                <hr class="mtto-line center"/>
+                </div>
+                <div class="col l6 s12 hide-on-med-and-down">
+                    <img class="img-destacado responsive-img" src="{!! $contenido->imagen !!}" style=""/>
+                </div>
+                <div class="col l6 s12">
+                    <p>
+                        {!! $contenido->contenido !!}
+                    </p>
+                </div>
             </div>
         </div>
     </div>

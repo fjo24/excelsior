@@ -39,10 +39,6 @@
 					<div class="input-field col s12">
 				        <textarea id="titulo" name="titulo" class="materialize-textarea" required>{{$dato->titulo}}</textarea>
 				    </div>
-				    <label class="col l12 s12" for="parrafo">Subtitulo</label>
-					<div class="input-field col s12">
-				        <textarea id="subtitulo" name="subtitulo" class="materialize-textarea" required>{{$dato->subtitulo}}</textarea>
-				    </div>
 				    <label class="col l12 s12" for="parrafo">Contenido</label>
 				    <div class="input-field col s12">
 				        <textarea id="contenido" name="contenido" class="materialize-textarea" required>{{$dato->contenido}}</textarea>
@@ -58,7 +54,6 @@
 <script src="//cdn.ckeditor.com/4.9.2/full/ckeditor.js"></script>
 <script>
 	CKEDITOR.replace('titulo');
-	CKEDITOR.replace('subtitulo');
 	CKEDITOR.replace('contenido');
 	CKEDITOR.config.height = '150px';
 	CKEDITOR.config.width = '100%';
