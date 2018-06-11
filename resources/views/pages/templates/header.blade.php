@@ -47,7 +47,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="badges.html">
+                        <a href="/categorias">
                             PRODUCTOS
                         </a>
                     </li>

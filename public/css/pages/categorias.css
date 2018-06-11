@@ -1,0 +1,45 @@
+.categorias {
+    margin-top: 50px;
+    margin-bottom: 83px;
+}
+.titulo-cat {
+    font-size: 27px;
+    color: #FF0000;
+    font-family: 'Raleway';
+    margin-bottom: 30px;
+}
+.cat-line {
+    width: 100px;
+    height: 2px!important;
+    background-color: red!important;
+    border: 0px red;
+}
+.items-cat {
+    margin-top: 48px;
+}
+.img-cat {
+    width: 374px;
+    height: 406px;
+}
+.div-nombre {
+    display: table;
+    background-color: rgba(51, 51, 51, 0.86);
+    height: 104px;
+    font-weight: 900;
+    font-family: 'Raleway';
+    justify-content: center;
+    align-items: center;
+    font-size: 29px;
+    position: relative;
+    width: 100%;
+    bottom: 108px;
+    color: white;
+}
+.texto {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.div-categoria{
+	height: 429px;
+}

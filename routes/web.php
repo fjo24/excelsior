@@ -17,6 +17,12 @@ Route::get('/', 'PaginasController@home');
 //MANTENIMIENTO
 Route::get('/mantenimiento', 'PaginasController@mantenimiento');
 
+//CATEGORIAS
+Route::get('/categorias', 'PaginasController@categorias');
+
+//PRODUCTOS
+Route::get('/productos/{producto_id}', 'PaginasController@productos')->name('productos');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

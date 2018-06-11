@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Banner;
+use App\Categoria;
 use App\Destacado_home;
 use App\Destacado_mantenimiento;
+use App\Producto;
 use App\Servicio;
 use App\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-
-//use Mail;
 
 class PaginasController extends Controller
 {
@@ -31,13 +31,6 @@ class PaginasController extends Controller
         return view('pages.mantenimiento', compact('sliders', 'servicios', 'contenido'));
     }
 
-    public function empresa()
-    {
-        $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'empresa')->get();
-        $contenido = Contenidoempresa::all()->first();
-        return view('pages.empresa', compact('sliders', 'contenido'));
-    }
-
     public function categorias()
     {
         $categorias = Categoria::OrderBy('orden', 'asc')->get();
@@ -50,6 +43,13 @@ class PaginasController extends Controller
         $ready     = 0;
         $productos = Producto::OrderBy('orden', 'asc')->where('categoria_id', $id)->get();
         return view('pages.productos', compact('productos', 'categoria', 'ready'));
+    }
+
+    public function empresa()
+    {
+        $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'empresa')->get();
+        $contenido = Contenidoempresa::all()->first();
+        return view('pages.empresa', compact('sliders', 'contenido'));
     }
 
     public function productoinfo($id)
