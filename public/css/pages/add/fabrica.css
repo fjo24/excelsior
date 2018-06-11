@@ -1,0 +1,73 @@
+.fabrica{
+	position: relative;
+	left: 10px;
+}
+
+.fabrica img{
+	height: 539px;
+	width: 627px;
+}
+
+.fabrica div{
+	line-height: 26px;
+	padding :52px;
+}
+
+.fabrica p{
+	margin-top:12px; 
+	margin-bottom:12px;
+	font-family: 'Source Sans Pro', sans-serif!important;
+}
+
+.fabrica_slider_dif{
+	text-align: left; 
+	position: absolute;
+	top: 20%;
+	left: 70%;
+	font-size:50px!important; 
+	background-color: rgba(23, 27, 66, 0.9); 
+	width: 467px!important; 
+	height: 200px; 
+	line-height: 100%; 
+	font-family: 'Source Sans Pro', sans-serif!important;
+}
+
+.fabrica_slider_dif span{
+	text-align: left; 
+	padding: 3%;
+	font-size: 50px; 
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#infof{
+   width: 570px;
+   padding-top: -25px;
+  }
+
+@media only screen and (max-width: 1003px){
+#infof{
+      width: 400px;
+      padding-left: 30px;
+          position: relative;
+    left: 50px;
+  }
+}
+
+@media only screen and (max-width: 769px){
+#infof{
+      width: 480px;
+      padding-left: 10px;
+          position: relative;
+    left: -30px;
+  }
+}
+
+@media only screen and (max-width: 415px){
+#infof{
+      width: 300px;
+      padding-left: 0px;
+          position: relative;
+    left: -10px;
+  }
+}
+

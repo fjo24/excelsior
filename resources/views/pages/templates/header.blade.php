@@ -17,13 +17,13 @@
                 </div>
                 <div class="li-contacto">
                     <a href="">
-                        <img alt="" src="{{asset('img/layouts/mail.png')}}" style="margin-right: 5px;">
+                        <img alt="{{ url('/contacto') }}" src="{{asset('img/layouts/mail.png')}}" style="margin-right: 5px;">
                             CONTACTO
                         </img>
                     </a>
                 </div>
                 <div class="li-presupuesto">
-                    <a href="">
+                    <a href="{{ url('/presupuesto') }}">
                         <img alt="" src="{{asset('img/layouts/correo2.png')}}" style="margin-right: 0px;">
                             SOLICITUD DE PRESUPUESTO
                         </img>
@@ -42,7 +42,7 @@
             <div class="container" style="width: 90%">
                 <ul class="item-left left hide-on-med-and-down">
                     <li>
-                        <a href="/mantenimiento">
+                        <a href="{{ url('/mantenimiento') }}">
                             MANTENIMIENTO
                         </a>
                     </li>

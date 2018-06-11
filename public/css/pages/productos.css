@@ -6,7 +6,7 @@
     font-size: 27px;
     color: #FF0000;
     font-family: 'Raleway';
-    margin-bottom: 30px;
+    margin-bottom: 36px;
 }
 .pro-line {
     width: 100px;
@@ -46,7 +46,7 @@
     border-radius:10px;
     background-color: #FF0000;
     left: 0px;
-    top: 35px;
+    top: 30px;
 }
 
 .div-producto{
@@ -54,12 +54,13 @@
 }
 
 .pro-line{
-    position: relative;
-    width: 48px;
-    height: 1px;
-    border: 1px;
-    border-radius:10px;
-    background-color: #FF0000;
-    left: 0px;
-    top: 25px;
+    position: relative!important;
+    width: 48px!important;
+    height: 1px!important;
+    border: 1px!important;
+    border-radius:10px!important;
+    background-color: #FF0000!important;
+    left: 0px!important;
+    top: 5px!important;
 }
+

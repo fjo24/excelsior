@@ -3,25 +3,26 @@
 @section('css')
 <link href="{{ asset('css/pages/sliders/slider.css') }}" rel="stylesheet"/>
 <link href="{{ asset('css/pages/servicios.css') }}" rel="stylesheet"/>
-<link href="{{ asset('css/pages/mantenimiento.css') }}" rel="stylesheet"/>
+
 @endsection
 @section('contenido')
 <div class="slider hide-on-med-and-down">
     <ul class="slides ">
         @foreach($sliders as $slider)
         <li>
-            <img src="{{asset($slider->imagen)}}">
-                <div class="caption box-cap" style="">
-                    <div style="">
-                        <span class="slidertext1">
-                            {!! $slider->texto !!}
-                        </span>
-                        <span class="slidertext2">
-                            {!! $slider->texto2 !!}
-                        </span>
-                    </div>
+            <img src="{{asset($slider->imagen)}}"/>
+            @if(isset($slider->texto)||isset($slider->texto2))
+            <div class="caption box-cap" style="">
+                <div style="">
+                    <span class="slidertext1">
+                        {!! $slider->texto !!}
+                    </span>
+                    <span class="slidertext2">
+                        {!! $slider->texto2 !!}
+                    </span>
                 </div>
-            </img>
+            </div>
+            @endif
         </li>
         @endforeach
     </ul>
@@ -60,7 +61,7 @@
                     <h3 style="font-weight: 900!important;">
                         {!! $contenido->titulo !!}
                     </h3>
-                <hr class="mtto-line2 center"/>
+                    <hr class="mtto-line2 center"/>
                 </div>
                 <div class="col l6 s12 hide-on-med-and-down">
                     <img class="img-destacado responsive-img" src="{!! $contenido->imagen !!}" style=""/>

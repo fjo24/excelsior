@@ -27,6 +27,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//PRESUPUESTO
+Route::get('/presupuesto', 'PaginasController@presupuesto');
+Route::post('enviar-presupuesto',[
+    'uses'=>'PaginasController@enviarpresupuesto',
+    'as'=>'enviarpresupuesto'
+]);
+
+//CONTACTO
+Route::get('contacto', 'PaginasController@contacto');
+Route::post('enviar-mail',[
+    'uses'=>'PaginasController@enviarmail',
+    'as'=>'enviarmail'
+]);
+
+
 // ADMINISTRADOR
 
 Route::prefix('adm')->group(function () {

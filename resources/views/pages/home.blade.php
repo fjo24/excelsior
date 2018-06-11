@@ -78,17 +78,20 @@
                 <img class="img-destacado responsive-img" src="{!! $contenido->imagen !!}" style="">
                 </img>
             </div>
-            <div class="col l6 s12">
-                <p>
+            <div class="dest-text col l6 s12">
+                <div class="tit-dest">
                     {!! $contenido->titulo !!}
-                </p>
+                </div>
                 <hr class="dest-line">
-                <p>
+                <div class="subtit-dest">
                     {!! $contenido->subtitulo !!}
-                </p>
-                <p>
+                </div>
+                <div class="cont-dest">
                     {!! $contenido->contenido !!}
-                </p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cont-btn">
+                    <button type="button" class="boton btn btn-default pull-right">Conocé mas</button>
+                </div>
             </div>
         </div>
     </div>

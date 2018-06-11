@@ -1,37 +1,63 @@
-.seccion-banner{
-	background: url(/img/home/banner/fondohome.png);
-	height: 333px;
-	width: 100%;
+.seccion-banner {
+    background: url(/img/home/banner/fondohome.png);
+    height: 333px;
+    width: 100%;
 }
-
-.btexto{
-	padding-top: 95px;
-	line-height: 10px;
+.btexto {
+    padding-top: 95px;
+    line-height: 10px;
 }
-
-.tbanner{
-	color: #FFFFFF;
-	font-family: 'Raleway';
-	font-size: 40px;
+.tbanner {
+    color: #FFFFFF;
+    font-family: 'Raleway';
+    font-size: 40px;
 }
-
-.tbanner2{
-	color: #FFFFFF;
-	font-family: 'Raleway';
-	font-size: 40px;
+.tbanner2 {
+    color: #FFFFFF;
+    font-family: 'Raleway';
+    font-size: 40px;
 }
-.tbanner3{
-	color: #FFFFFF;
-	font-family: 'Raleway';
-	font-size: 40px;
+.tbanner3 {
+    color: #FFFFFF;
+    font-family: 'Raleway';
+    font-size: 40px;
 }
-
-.img-destacado{
-	width: 533px; 
-	height: 368px;
+.img-destacado {
+    width: 533px;
+    height: 368px;
 }
-
-.destacado-home{
-	margin-top: 86px;
-	margin-bottom: 86px;
+.destacado-home {
+    margin-top: 86px;
+    margin-bottom: 86px;
+}
+.destacado-home .tit-dest span {
+    font-family: 'Raleway';
+    font-size: 32px!important;
+}
+.dest-text {
+    margin-top: -25px;
+}
+.dest-line {
+    width: 100px;
+    height: 2px!important;
+    background-color: red!important;
+    margin-top: -5px;
+    margin-left: 0px;
+    border: 0px red;
+}
+.destacado-home .subtit-dest p {
+    font-family: 'Raleway';
+    font-size: 17px!important;
+    margin-top: 38px;
+    font-weight: 800!important;
+}
+.boton {
+    background-color: white!important;
+    border: 2px solid #ff0000!important;
+    color: #ff0000!important;
+    margin: 0px 5px;
+    font-family: 'Raleway'!important;
+    font-size: 18px!important;
+    margin-bottom: 0px;
+    margin-top: 40px;
 }

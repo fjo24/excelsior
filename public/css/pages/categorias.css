@@ -15,7 +15,7 @@
     border: 0px red;
 }
 .items-cat {
-    margin-top: 48px;
+    margin-top: 38px;
 }
 .img-cat {
     width: 374px;
@@ -32,14 +32,56 @@
     font-size: 29px;
     position: relative;
     width: 100%;
-    bottom: 108px;
+    bottom: 104px;
     color: white;
 }
 .texto {
     display: table-cell;
     vertical-align: middle;
 }
+.div-categoria {
+    display: table;
+    height: 429px;
+}
+/* DESTACADOS */
 
-.div-categoria{
-	height: 429px;
+.efecto {
+    position: absolute;
+    opacity: 0;
+    background-color: rgba(255, 0, 0, 0.75);
+    width: 338px;
+    height: 364px;
+    z-index: 999;
+    margin: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.efecto:hover {
+    opacity: 1;
+    transition: 1s;
+}
+.central {
+    padding: inherit;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    color: white;
+    width: 59px;
+    height: 59px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+.efecto i {
+    padding-top: 20%;
+    /*font-weight: bold;*/
+    font-size: 30px;
+}
+.bloquecard {
+    padding-right: 5px!important;
+    padding-left: 5px!important;
+    height: 442px!important;
 }

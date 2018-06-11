@@ -9,7 +9,7 @@
         <div style="">
             <div class="row center">
                 <span class="titulo-pro">
-                    Productos
+                    Productos | <a href="{{ url('categorias')}}" style= "color:#ff0000;">{!! $categoria->nombre !!}</a>
                 </span>
                 <hr class="pro-line"/>
                 <div class="items-pro col l12 s12 m12">

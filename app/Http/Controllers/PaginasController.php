@@ -7,6 +7,7 @@ use App\Categoria;
 use App\Destacado_home;
 use App\Destacado_mantenimiento;
 use App\Producto;
+use App\Dato;
 use App\Servicio;
 use App\Slider;
 use Illuminate\Http\Request;
@@ -26,7 +27,7 @@ class PaginasController extends Controller
     public function mantenimiento()
     {
         $servicios = Servicio::OrderBy('orden', 'ASC')->get();
-        $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'mentenimiento')->get();
+        $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'mantenimiento')->get();
         $contenido = Destacado_mantenimiento::all()->first();
         return view('pages.mantenimiento', compact('sliders', 'servicios', 'contenido'));
     }
@@ -159,8 +160,8 @@ class PaginasController extends Controller
 
         Mail::send('pages.emails.presupuestomail', ['nombre' => $nombre, 'tel' => $tel, 'mail' => $mail, 'localidad' => $localidad, 'detalle' => $detalle, 'medida' => $medida], function ($message) use ($archivo) {
 
-            $dato = Empresa::where('tipo', 'mail')->first();
-            $message->from($dato->descripcion, 'Aberturas Tolosa');
+            $dato = Dato::where('tipo', 'email')->first();
+            $message->from('info@aberturastolosa.com.ar', 'Excelsior');
 
             $message->to($dato->descripcion);
 
@@ -172,11 +173,9 @@ class PaginasController extends Controller
 
         });
         if (Mail::failures()) {
-            flash('Ha ocurrido un error.')->error()->important();
             return view('pages.presupuesto');
         }
-        flash('El mensaje se ha enviado exitosamente.')->success()->important();
-        return view('pages.presupuesto', compact('sliders'));
+        return view('pages.presupuesto');
     }
 
     public function contacto()
@@ -187,19 +186,27 @@ class PaginasController extends Controller
     public function enviarmail(Request $request)
     {
 
-        $dato     = Empresa::where('tipo', 'mail')->first();
+        $dato     = Dato::where('tipo', 'mail')->first();
         $nombre   = $request->nombre;
         $apellido = $request->apellido;
         $empresa  = $request->empresa;
         $email    = $request->email;
         $mensaje  = $request->mensaje;
 
-        Mail::to($dato->descripcion)->send(new sendmail($nombre, $apellido, $empresa, $mensaje, $email));
+        Mail::send('pages.emails.contactomail', ['nombre' => $nombre, 'apellido' => $apellido, 'empresa' => $empresa, 'email' => $email, 'mensaje' => $mensaje], function ($message) {
+
+            $dato = Dato::where('tipo', 'email')->first();
+            $message->from('info@aberturastolosa.com.ar', 'Excelsior');
+
+            $message->to($dato->descripcion);
+
+            //Add a subject
+            $message->subject("Contacto");
+
+        });
         if (Mail::failures()) {
-            flash('Ha ocurrido un error.')->error()->important();
             return view('pages.contacto');
         }
-        flash('El mensaje se ha enviado exitosamente.')->success()->important();
         return view('pages.contacto');
     }
 
