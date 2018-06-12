@@ -30,7 +30,7 @@
                     Categoria
                 </th>
                 <th>
-                    Imagen
+                    Administrar imagenes
                 </th>
                 <th>
                 	Ficha
@@ -48,9 +48,7 @@
                     <td>
                         {!!$producto->categoria->nombre!!}
                     </td>
-                    <td>
-                    	<img src="{{ asset($producto->imagen) }}" alt="seccion" width="150" height="150"/>
-                    </td>
+                    <td><a href="{{ route('imagenpro',$producto->id)}}"><i class="material-icons">image</i></a></td>
                     <td>
                     	@if(isset($producto->ficha))
                                     <a href='{{ route('file-pdf', ['post' => $producto->id])}}'> 

@@ -16,7 +16,6 @@ class AddProductosTable extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('imagen');
             $table->string('orden');
             $table->string('ficha')->nullable();
             $table->string('contenido');

@@ -5,7 +5,9 @@ namespace App\Http\Controllers\adm;
 use App\Categoria;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductosRequest;
+use App\Imgproducto;
 use App\Producto;
+use Illuminate\Http\Request;
 
 class ProductosController extends Controller
 {
@@ -29,16 +31,6 @@ class ProductosController extends Controller
         $producto->ficha        = $request->ficha;
         $producto->contenido    = $request->contenido;
         $producto->categoria_id = $request->categoria_id;
-        $id                     = Producto::all()->max('id');
-        $id++;
-        if ($request->hasFile('imagen')) {
-            if ($request->file('imagen')->isValid()) {
-                $file = $request->file('imagen');
-                $path = public_path('img/producto/imagen/');
-                $request->file('imagen')->move($path, $id . '_' . $file->getClientOriginalName());
-                $producto->imagen = 'img/producto/imagen/' . $id . '_' . $file->getClientOriginalName();
-            }
-        }
         if ($request->hasFile('ficha')) {
             if ($request->file('ficha')->isValid()) {
                 $file = $request->file('ficha');
@@ -48,6 +40,19 @@ class ProductosController extends Controller
             }
         }
         $producto->save();
+        $id = $producto->id;
+        if ($request->HasFile('file')) {
+            foreach ($request->file as $file) {
+                $filename = $file->getClientOriginalName();
+                $path     = public_path('img/producto/');
+                $file->move($path, $id . '_' . $file->getClientOriginalName());
+                $imagen              = new Imgproducto;
+                $imagen->ubicacion   = 'img/producto/' . $id . '_' . $file->getClientOriginalName();
+                $imagen->producto_id = $id;
+                $imagen->save();
+            }
+
+        }
         return redirect()->route('productos.index');
     }
 
@@ -70,16 +75,6 @@ class ProductosController extends Controller
         $producto->orden     = $request->orden;
         $producto->ficha     = $request->ficha;
         $producto->contenido = $request->contenido;
-        $id                  = Producto::all()->max('id');
-        $id++;
-        if ($request->hasFile('imagen')) {
-            if ($request->file('imagen')->isValid()) {
-                $file = $request->file('imagen');
-                $path = public_path('img/producto/imagen/');
-                $request->file('imagen')->move($path, $id . '_' . $file->getClientOriginalName());
-                $producto->imagen = 'img/producto/imagen/' . $id . '_' . $file->getClientOriginalName();
-            }
-        }
         if ($request->hasFile('ficha')) {
             if ($request->file('ficha')->isValid()) {
                 $file = $request->file('ficha');
@@ -89,6 +84,18 @@ class ProductosController extends Controller
             }
         }
         $producto->save();
+        if ($request->HasFile('file')) {
+            foreach ($request->file as $file) {
+                $filename = $file->getClientOriginalName();
+                $path     = public_path('img/producto/');
+                $file->move($path, $id . '_' . $file->getClientOriginalName());
+                $imagen              = new Imgproducto;
+                $imagen->ubicacion   = 'img/producto/' . $id . '_' . $file->getClientOriginalName();
+                $imagen->producto_id = $id;
+                $imagen->save();
+            }
+
+        }
         return redirect()->route('productos.index');
     }
 
@@ -106,5 +113,45 @@ class ProductosController extends Controller
         $url      = $path . '/' . $producto->ficha;
         return response()->download($url);
         return redirect()->route('productos.index');
+    }
+
+    //admin de imagenes
+    public function imagen($id)
+    {
+        $imagenes = Imgproducto::orderBy('id', 'ASC')->Where('producto_id', $id)->get();
+
+        $producto = producto::find($id);
+        return view('adm.productos.imagenes')->with(compact('imagenes', 'producto'));
+    }
+
+    public function nuevaimagen(Request $request, $id)
+    {
+        if ($request->HasFile('file')) {
+            foreach ($request->file as $file) {
+                $filename = $file->getClientOriginalName();
+                $path     = public_path('img/producto/');
+                $file->move($path, $id . '_' . $file->getClientOriginalName());
+                $imagen              = new Imgproducto;
+                $imagen->ubicacion   = 'img/producto/' . $id . '_' . $file->getClientOriginalName();
+                $imagen->producto_id = $id;
+                $imagen->save();
+            }
+
+        }
+        $imagenes = Imgproducto::orderBy('id', 'ASC')->Where('producto_id', $id)->get();
+
+        $producto = producto::find($id);
+        return view('adm.productos.imagenes')->with(compact('imagenes', 'producto'));
+    }
+
+    public function destroyimg($id)
+    {
+        $imagen = Imgproducto::find($id);
+        $idpro  = $imagen->producto_id;
+        $imagen->delete();
+        $imagenes = Imgproducto::orderBy('id', 'ASC')->Where('producto_id', $idpro)->get();
+
+        $producto = producto::find($idpro);
+        return view('adm.productos.imagenes')->with(compact('imagenes', 'producto'));
     }
 }

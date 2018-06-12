@@ -29,18 +29,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //PRESUPUESTO
 Route::get('/presupuesto', 'PaginasController@presupuesto');
-Route::post('enviar-presupuesto',[
-    'uses'=>'PaginasController@enviarpresupuesto',
-    'as'=>'enviarpresupuesto'
+Route::post('enviar-presupuesto', [
+    'uses' => 'PaginasController@enviarpresupuesto',
+    'as'   => 'enviarpresupuesto',
 ]);
 
 //CONTACTO
 Route::get('contacto', 'PaginasController@contacto');
-Route::post('enviar-mail',[
-    'uses'=>'PaginasController@enviarmail',
-    'as'=>'enviarmail'
+Route::post('enviar-mail', [
+    'uses' => 'PaginasController@enviarmail',
+    'as'   => 'enviarmail',
 ]);
-
 
 // ADMINISTRADOR
 
@@ -88,6 +87,16 @@ Route::prefix('adm')->group(function () {
 
     /*------------PRODUCTOS----------------*/
     Route::resource('productos', 'adm\ProductosController');
+    /*------------Imagen----------------*/
+    Route::delete('imagen/{id}/destroy', [
+        'uses' => 'adm\ProductosController@destroyimg',
+        'as'   => 'imgproducto.destroy',
+    ]);
+
+    /*-------imagenes productos----------*/
+    Route::get('/producto/imagenes/{producto_id}', 'adm\ProductosController@imagen')->name('imagenpro');
+    //agregar nuevas imagenes de productos
+    Route::post('producto/{id}/imagen/', 'adm\ProductosController@nuevaimagen')->name('nuevaimagenpro'); //es el store de las
     // Rutas de reportes pdf
     Route::get('pdf/{id}', ['uses' => 'adm\ProductosController@downloadPdf', 'as' => 'file-pdf']);
 
