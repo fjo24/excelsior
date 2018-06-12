@@ -5,7 +5,7 @@
 .titulo-pro {
     font-size: 27px;
     color: #FF0000;
-    font-family: 'Raleway';
+    
     margin-bottom: 36px;
 }
 .pro-line {
@@ -25,7 +25,7 @@
 .div-nombre{
      
     height: 66px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Raleway';
     display: flex;
     color:#000000;
     justify-content: left;
@@ -64,3 +64,10 @@
     top: 5px!important;
 }
 
+.contenido-info{
+    font-family: 'Raleway';
+    font-size: 24px;
+    color: #858585!important;
+    position: relative;
+    top: -40px;
+}

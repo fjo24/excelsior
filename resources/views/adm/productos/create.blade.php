@@ -56,7 +56,7 @@
                             </input>
                         </div>
                         <div class="file-path-wrapper">
-                {!! Form::text('ficha',null, ['class'=>'file-path']) !!}
+                {!! Form::text('file',null, ['class'=>'file-path']) !!}
             </div>
                     </div>
                 

@@ -17,15 +17,26 @@ Route::get('/', 'PaginasController@home');
 //MANTENIMIENTO
 Route::get('/mantenimiento', 'PaginasController@mantenimiento');
 
-//CATEGORIAS
+//CATEGORIAS DE PRODUCTOS
 Route::get('/categorias', 'PaginasController@categorias');
 
 //PRODUCTOS
 Route::get('/productos/{producto_id}', 'PaginasController@productos')->name('productos');
 
+//CATEGORIA DE OBRAS
+Route::get('/categoriaobras', 'PaginasController@categoriaobras');
+//OBRA
+Route::get('/obras/{obra_id}', 'PaginasController@obras')->name('obras');
+
+//CONSEJOS
+Route::get('/consejos', 'PaginasController@consejos')->name('consejos');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//show producto
+Route::get('/producto-info/{producto_id}',  'PaginasController@productoinfo')->name('productoinfo');
 
 //PRESUPUESTO
 Route::get('/presupuesto', 'PaginasController@presupuesto');
@@ -99,6 +110,8 @@ Route::prefix('adm')->group(function () {
     Route::post('producto/{id}/imagen/', 'adm\ProductosController@nuevaimagen')->name('nuevaimagenpro'); //es el store de las
     // Rutas de reportes pdf
     Route::get('pdf/{id}', ['uses' => 'adm\ProductosController@downloadPdf', 'as' => 'file-pdf']);
+    // Rutas de reportes pdf desde la web
+    Route::get('pdf2/{id}', ['uses' => 'adm\ProductosController@downloadPdf2', 'as' => 'file-pdf2']);
 
     /*------------CATEGORIAS DE OBRAS----------------*/
     Route::resource('cat-obras', 'adm\CatObrasController');

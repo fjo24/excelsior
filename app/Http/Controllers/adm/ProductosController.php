@@ -31,6 +31,7 @@ class ProductosController extends Controller
         $producto->ficha        = $request->ficha;
         $producto->contenido    = $request->contenido;
         $producto->categoria_id = $request->categoria_id;
+        $id = $producto->id;
         if ($request->hasFile('ficha')) {
             if ($request->file('ficha')->isValid()) {
                 $file = $request->file('ficha');
@@ -75,6 +76,7 @@ class ProductosController extends Controller
         $producto->orden     = $request->orden;
         $producto->ficha     = $request->ficha;
         $producto->contenido = $request->contenido;
+        $id = $producto->id;
         if ($request->hasFile('ficha')) {
             if ($request->file('ficha')->isValid()) {
                 $file = $request->file('ficha');
@@ -107,6 +109,15 @@ class ProductosController extends Controller
     }
 
     public function downloadPdf($id)
+    {
+        $producto = Producto::find($id);
+        $path     = public_path();
+        $url      = $path . '/' . $producto->ficha;
+        return response()->download($url);
+        return redirect()->route('productos.index');
+    }
+
+    public function downloadPdf2($id)
     {
         $producto = Producto::find($id);
         $path     = public_path();

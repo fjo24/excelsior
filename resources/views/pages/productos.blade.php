@@ -16,8 +16,14 @@
                     @foreach($productos as $producto)
                     <div class="col l4 s12 m4">
                         <div class="div-producto">
-                            <a href="">
-                                <img alt="" class="img-pro responsive-img" src="{{asset($producto->imagen)}}"/>
+                            <a href="{{ route('productoinfo', $producto->id)}}">
+                                @foreach($producto->imagenes as $imagen)
+                                        <img alt="" class="img-pro responsive-img" src="{{asset($imagen->ubicacion)}}"/>
+                                        @if($ready == 0)    
+                                        @break;
+                                    @endif
+                                    @endforeach
+                                
                                 <hr align="left">
                                     <div class="div-nombre">
                                         {!!$producto->nombre !!}

@@ -4,10 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Banner;
 use App\Categoria;
+use App\Categoria_obra;
+use App\Dato;
 use App\Destacado_home;
 use App\Destacado_mantenimiento;
+use App\imgproducto;
+use App\Obra;
 use App\Producto;
-use App\Dato;
+use App\Consejo;
 use App\Servicio;
 use App\Slider;
 use Illuminate\Http\Request;
@@ -55,34 +59,29 @@ class PaginasController extends Controller
 
     public function productoinfo($id)
     {
-        $imagenes   = Imgproducto::OrderBy('ubicacion', 'ASC')->where('producto_id', '$id')->get();
-        $producto   = Producto::find($id);
-        $idc        = $producto->categoria_id;
-        $categoria  = Categoria::find($idc);
-        $guia       = 0;
-        $ready      = 0;
-        $modelos    = Modelo::OrderBy('orden', 'ASC')->Where('producto_id', $id)->get();
-        $imgmodelos = Imgproducto::OrderBy('ubicacion', 'ASC')->get();
-        foreach ($modelos as $modelo) {
-            if (isset($modelo)) {
-                $guia = 1;
-                break;
-            }
-        }
-        if ($guia == 0) {
-            return view('pages.productoinfo', compact('producto', 'categoria', 'imagenes'));
-        } else {
-            return view('pages.modelos', compact('producto', 'categoria', 'modelos', 'imgmodelos', 'ready'));
-        }
+        $imagenes  = Imgproducto::OrderBy('ubicacion', 'ASC')->where('producto_id', '$id')->get();
+        $producto  = Producto::find($id);
+        $idc       = $producto->categoria_id;
+        $categoria = Categoria::find($idc);
+        $guia      = 0;
+        $ready     = 0;
+
+        return view('pages.productoinfo', compact('producto', 'categoria', 'imagenes'));
+
     }
 
-    public function modelos($id)
+    public function categoriaobras()
     {
-        $producto  = Producto::find($id);
-        $ready     = 0;
-        $categoria = Categoria::find($producto->categoria_id);
-        $modelos   = Modelo::OrderBy('orden', 'asc')->where('producto_id', $id)->get();
-        return view('pages.modelos', compact('producto', 'modelos', 'categoria', 'ready'));
+        $obras = Categoria_obra::OrderBy('orden', 'asc')->get();
+        return view('pages.catobras', compact('obras'));
+    }
+
+    public function obras($id)
+    {
+        $categoria = Categoria::find($id);
+        $ready         = 0;
+        $obras     = Obra::OrderBy('orden', 'ASC')->where('categoria_obra_id', $id)->get();
+        return view('pages.obras', compact('obras','ready', 'categoria'));
     }
 
     public function modeloinfo($id)
@@ -106,13 +105,6 @@ class PaginasController extends Controller
         $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'servicios')->get();
         $servicios = Servicio::OrderBy('id', 'ASC')->get();
         return view('pages.servicios', compact('sliders', 'servicios'));
-    }
-
-    public function obra()
-    {
-        $obras   = Obra::OrderBy('id', 'ASC')->get();
-        $sliders = Slider::orderBy('id', 'ASC')->Where('seccion', 'obras')->get();
-        return view('pages.obra', compact('obras', 'sliders'));
     }
 
     public function obrainfo($id)
@@ -182,6 +174,13 @@ class PaginasController extends Controller
     {
         return view('pages.contacto');
     }
+
+    public function consejos()
+    {
+        $consejos = Consejo::orderBy('orden', 'ASC')->get();
+        return view('pages.consejos', compact('consejos'));
+    }
+
 
     public function enviarmail(Request $request)
     {

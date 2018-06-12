@@ -16,7 +16,7 @@ class Obra extends Model
         return $this->belongsTo('App\Categoria_obra');
     }
 
-    public function obra_imagenes()
+    public function imagenes()
     {
         return $this->hasMany('App\Obra_imagen');
     }

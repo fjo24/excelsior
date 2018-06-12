@@ -47,7 +47,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/categorias">
+                        <a href="{{ url('/categorias') }}">
                             PRODUCTOS
                         </a>
                     </li>
@@ -68,17 +68,17 @@
                 </a>
                 <ul class="item-right right hide-on-med-and-down">
                     <li>
-                        <a href="badges.html">
+                        <a href="{{ url('/consejos') }}">
                             CONSEJOS DE SEGURIDAD
                         </a>
                     </li>
                     <li>
-                        <a href="collapsible.html">
+                        <a href="{{ url('/categoriaobras') }}">
                             OBRAS
                         </a>
                     </li>
                     <li>
-                        <a href="mobile.html">
+                        <a href="{{ url('/clientes') }}">
                             CLIENTES
                         </a>
                     </li>
