@@ -16,8 +16,8 @@ class AddConsejosTable extends Migration
         Schema::create('consejos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
-            $table->string('texto1');
-            $table->string('texto2');
+            $table->text('texto1');
+            $table->text('texto2');
             $table->string('imagen');
             $table->string('orden');
             $table->timestamps();
