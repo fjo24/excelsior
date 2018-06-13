@@ -24,6 +24,7 @@ class ClientesController extends Controller
     {
         $cliente         = new cliente();
         $cliente->nombre = $request->nombre;
+        $cliente->orden  = $request->orden;
         $cliente->link   = $request->link;
         $id              = Cliente::all()->max('id');
         $id++;

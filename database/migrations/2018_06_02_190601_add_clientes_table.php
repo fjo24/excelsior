@@ -17,6 +17,7 @@ class AddClientesTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('link');
+            $table->string('orden');
             $table->string('imagen');
             $table->timestamps();
         });

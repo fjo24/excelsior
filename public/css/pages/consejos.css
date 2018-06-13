@@ -112,3 +112,33 @@
     background-color: #F9F9F9;
     word-spacing: 2px;
 }
+
+.bloque-consejos{
+    display: table;
+    height: 450px;
+}
+
+.texto{
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    top: 93px;
+}
+
+.titulo{
+    font-family: 'Raleway'!important;
+    font-size: 30px!important;
+    color: #FF0000!important;
+}
+
+.texto1{
+    font-family: 'Raleway'!important;
+    font-size: 17px!important;
+    color: #504C52!important;
+}
+
+.texto2{
+    font-family: 'Raleway'!important;
+    font-size: 24px!important;
+    color: #504C52!important;
+}

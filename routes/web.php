@@ -17,6 +17,9 @@ Route::get('/', 'PaginasController@home');
 //MANTENIMIENTO
 Route::get('/mantenimiento', 'PaginasController@mantenimiento');
 
+//EMPRESA
+Route::get('/empresa', 'PaginasController@empresa');
+
 //CATEGORIAS DE PRODUCTOS
 Route::get('/categorias', 'PaginasController@categorias');
 
@@ -31,12 +34,15 @@ Route::get('/obras/{obra_id}', 'PaginasController@obras')->name('obras');
 //CONSEJOS
 Route::get('/consejos', 'PaginasController@consejos')->name('consejos');
 
+//CLIENTES
+Route::get('/clientes', 'PaginasController@clientes')->name('clientes');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 //show producto
-Route::get('/producto-info/{producto_id}',  'PaginasController@productoinfo')->name('productoinfo');
+Route::get('/producto-info/{producto_id}', 'PaginasController@productoinfo')->name('productoinfo');
 
 //PRESUPUESTO
 Route::get('/presupuesto', 'PaginasController@presupuesto');

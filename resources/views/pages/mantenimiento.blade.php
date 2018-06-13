@@ -3,6 +3,7 @@
 @section('css')
 <link href="{{ asset('css/pages/sliders/slider.css') }}" rel="stylesheet"/>
 <link href="{{ asset('css/pages/servicios.css') }}" rel="stylesheet"/>
+<link href="{{ asset('css/pages/mantenimiento.css') }}" rel="stylesheet"/>
 
 @endsection
 @section('contenido')
