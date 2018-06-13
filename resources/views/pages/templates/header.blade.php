@@ -52,7 +52,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="collapsible.html">
+                        <a href="{{ url('/empresa') }}">
                             EMPRESA
                         </a>
                     </li>
@@ -87,32 +87,32 @@
         </nav>
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <a href="sass.html">
+                <a href="{{ url('/mantenimiento') }}">
                     MANTENIMIENTO
                 </a>
             </li>
             <li>
-                <a href="badges.html">
+                <a href="{{ url('/categorias') }}">
                     PRODUCTOS
                 </a>
             </li>
             <li>
-                <a href="collapsible.html">
+                <a href="{{ url('/empresa') }}">
                     EMPRESA
                 </a>
             </li>
             <li>
-                <a href="badges.html">
+                <a href="{{ url('/consejos') }}">
                     CONSEJOS DE SEGURIDAD
                 </a>
             </li>
             <li>
-                <a href="collapsible.html">
+                <a href="{{ url('/categoriaobras') }}">
                     OBRAS
                 </a>
             </li>
             <li>
-                <a href="mobile.html">
+                <a href="{{ url('/clientes') }}">
                     CLIENTES
                 </a>
             </li>

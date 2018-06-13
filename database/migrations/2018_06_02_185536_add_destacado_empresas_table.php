@@ -22,6 +22,7 @@ class AddDestacadoEmpresasTable extends Migration
             $table->text('subtitulo2', 500);
             $table->text('contenido2', 2000);
             $table->string('link', 400)->nullable();
+            $table->string('video', 400)->nullable();
             $table->string('imagen');
             $table->timestamps();
         });

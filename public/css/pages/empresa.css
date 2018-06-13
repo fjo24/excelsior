@@ -1,0 +1,96 @@
+.img-destacado {
+    width: 565px!important;
+    height: 350px!important;
+}
+.video {
+    margin-top: 0px;
+    height: 630px;
+    background-color: #F6F6F6;
+    color: #989699;
+    font-family: 'Raleway';
+}
+
+.video-container{
+	position: relative;
+    top: 24px;
+}
+.titulo-mtto p {
+    font-weight: 900!important;
+}
+.img-empresa {
+    margin-top: 51px;
+    position: relative;
+    left: 30px!important;
+}
+.empresa-line {
+    position: relative;
+    bottom: 15px;
+    width: 100px;
+    height: 2px!important;
+    background-color: red!important;
+    border: 0px red;
+}
+.cont-empresa {
+    position: relative;
+    bottom: -5px;
+    color: #858585;
+    font-family: 'Raleway';
+    font-size: 17px;
+}
+.cont-empresa p {
+    margin-bottom: -17px;
+}
+.subt-empresa {
+    font-size: 20px;
+    color: #FF0000;
+    font-weight: bold;
+    margin-top: -13px;
+}
+.empresa-linea1 {
+    position: relative;
+    bottom: -21px;
+    width: 363px;
+    height: 2px!important;
+    background-color: red!important;
+    border: 0px red;
+}
+.empresa-linea2 {
+    position: relative;
+    bottom: 15px;
+    width: 363px;
+    height: 2px!important;
+    background-color: red!important;
+    border: 0px red;
+}
+.cont-empresa2 {
+    position: relative;
+    top: -40px;
+    color: #858585;
+    width: 100%;
+    padding-top: 0px;
+    font-family: 'Raleway';
+    font-size: 17px;
+}
+.cont-empresa2 p {
+	margin-top: 0px;
+	word-spacing: 7px;
+	width: 360px;
+}
+.subt-empresa2 {
+    font-size: 17px;
+    color: #1F1F1F;
+    font-family: 'Raleway';
+    margin-top: -13px;
+    font-weight: bold;
+}
+.subt-empresa2 p {}
+.tit-empresa2 {
+    font-size: 21px;
+    color: #FF0000;
+    font-family: 'Lato';
+    word-spacing: 5px;
+    font-weight: bold;
+}
+.tit-empresa2 p {
+    width: 63%;
+}

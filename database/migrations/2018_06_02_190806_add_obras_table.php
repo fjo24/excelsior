@@ -17,7 +17,7 @@ class AddObrasTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->string('subtitulo');
-            $table->string('tareas');
+            $table->text('tareas');
             $table->string('orden');
             $table->integer('categoria_obra_id')->unsigned();
 

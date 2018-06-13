@@ -30,7 +30,7 @@
             <!-- Dropdown Structure -->
             <ul class="dropdown-content" id="dropdown1">
                 <li>
-                    <a href="#!">
+                    <a href="{{ route('logout') }}">
                         Cerrar Sesión
                     </a>
                 </li>
@@ -50,7 +50,7 @@
                             <!-- Dropdown Trigger -->
                             <li>
                                 <a class="dropdown-trigger" data-target="dropdown1" href="#!">
-                                    Francisco Milano
+                                    Bienvenido
                                     <i class="material-icons right">
                                         arrow_drop_down
                                     </i>
@@ -368,28 +368,18 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="bold">
-                        <a class="collapsible-header waves-effect waves-admin">
-                            <i class="material-icons">
-                                account_circle
-                            </i>
-                            Usuarios
-                        </a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li>
-                                    <a href="{{route('user.create')}}">
-                                        Crear Usuario
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('user.index')}}">
-                                        Editar Usuario
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                   @if(Auth::user())
+                  @if(Auth::user()->nivel === 'administrador')
+                <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">account_circle</i>Usuarios</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a href="{{route('user.create')}}">Crear Usuario</a></li>
+                      <li><a href="{{route('user.index')}}">Editar Usuario</a></li>
+                    </ul>
+                  </div>
+                </li>
+                @endif
+              @endif
                     
                     <!--    @if(Auth::user())
                 @if(Auth::user()->nivel === 'administrador')

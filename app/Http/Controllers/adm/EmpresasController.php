@@ -31,6 +31,7 @@ class EmpresasController extends Controller
         $dato->subtitulo2 = $request->subtitulo2;
         $dato->contenido2 = $request->contenido2;
         $dato->link       = $request->link;
+        $dato->video      = $request->video;
         $id++;
 
         if ($request->hasFile('imagen')) {

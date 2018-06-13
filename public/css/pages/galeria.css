@@ -1,0 +1,24 @@
+.titulo-galeria {
+    color: #ff0000!important;
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: bold;
+}
+.subtitulo-galeria {
+    color: #ff0000!important;
+    font-family: 'Raleway';
+    font-size: 20px;
+}
+.tareas-galeria {
+    color: #000000!important;
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: bold;
+}
+.tareas {
+    color: #504C52!important;
+    font-size: 17px;
+    font-family: 'Raleway';
+    position: relative;
+    bottom: 15px; 
+}

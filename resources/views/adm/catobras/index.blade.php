@@ -1,6 +1,6 @@
 @extends('adm.layouts.frame')
 
-@section('titulo', 'Categoria de productos')
+@section('titulo', 'Categoria de obras')
 
 @section('contenido')
 	    @if(count($errors) > 0)

@@ -30,6 +30,8 @@ Route::get('/productos/{producto_id}', 'PaginasController@productos')->name('pro
 Route::get('/categoriaobras', 'PaginasController@categoriaobras');
 //OBRA
 Route::get('/obras/{obra_id}', 'PaginasController@obras')->name('obras');
+//GALERIA
+Route::get('/obragaleria/{obra_id}', 'PaginasController@galeria')->name('obragaleria');
 
 //CONSEJOS
 Route::get('/consejos', 'PaginasController@consejos')->name('consejos');
@@ -145,3 +147,7 @@ Route::prefix('adm')->group(function () {
     Route::resource('metadatos', 'adm\MetadatosController');
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

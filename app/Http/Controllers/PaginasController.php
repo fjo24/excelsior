@@ -13,6 +13,7 @@ use App\Destacado_home;
 use App\Destacado_mantenimiento;
 use App\imgproducto;
 use App\Obra;
+use App\Obra_imagen;
 use App\Producto;
 use App\Servicio;
 use App\Slider;
@@ -82,8 +83,9 @@ class PaginasController extends Controller
     {
         $categoria = Categoria::find($id);
         $ready     = 0;
+        $servicios = Producto::OrderBy('orden', 'ASC')->get();
         $obras     = Obra::OrderBy('orden', 'ASC')->where('categoria_obra_id', $id)->get();
-        return view('pages.obras', compact('obras', 'ready', 'categoria'));
+        return view('pages.obras', compact('obras', 'ready', 'categoria', 'servicios'));
     }
 
     public function modeloinfo($id)
@@ -114,6 +116,14 @@ class PaginasController extends Controller
         $obra    = Obra::find($id);
         $sliders = Slider::orderBy('id', 'ASC')->Where('seccion', 'obras')->get();
         return view('pages.obrainfo', compact('obra', 'sliders'));
+    }
+
+    public function galeria($id)
+    {
+        $ready = 0;
+        $obra    = Obra::find($id);
+        $imagenes  = Obra_imagen::OrderBy('id', 'ASC')->where('obra_id', '$id')->get();
+        return view('pages.obragaleria', compact('obra', 'imagenes', 'ready'));
     }
 
     public function fabrica()
@@ -172,10 +182,6 @@ class PaginasController extends Controller
         return view('pages.presupuesto');
     }
 
-    public function contacto()
-    {
-        return view('pages.contacto');
-    }
 
     public function consejos()
     {
@@ -188,6 +194,11 @@ class PaginasController extends Controller
     {
         $clientes = Cliente::orderBy('orden', 'ASC')->get();
         return view('pages.clientes', compact('clientes'));
+    }
+
+    public function contacto()
+    {
+        return view('pages.contacto');
     }
 
     public function enviarmail(Request $request)

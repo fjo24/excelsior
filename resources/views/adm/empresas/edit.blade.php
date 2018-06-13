@@ -26,6 +26,10 @@
 						{!!Form::label('Link :')!!}
 						{!!Form::text('link',$dato->link,['class'=>''])!!}
 					</div>
+					<div class="input-field col l6 m6 s12">
+						{!!Form::label('Video :')!!}
+						{!!Form::text('video',$dato->video,['class'=>''])!!}
+					</div>
 					<div class="file-field input-field col l6 m6 s12">
 						<div class="btn">
 						    <span>Imagen</span>
@@ -60,9 +64,12 @@
 				        <textarea id="contenido2" name="contenido2" class="materialize-textarea" required>{{$dato->contenido2}}</textarea>
 				    </div>
 				</div>
-				<div class="col s12 no-padding">
-					{!!Form::submit('Guardar', ['class'=>'waves-effect waves-light red btn-large right'])!!}
-				</div>
+				<button class="btn-large waves-effect waves-light red right" name="action" type="submit">
+                        Guardar
+                        <i class="material-icons right">
+                            send
+                        </i>
+                    </button>
 			{!!Form::close()!!} 
 			</div>
 			</div>

@@ -20,7 +20,7 @@
                     <div class="bloquecard col l6 s12 m6 center">
                         <div class="div-categoria card z-depth-0">
                             <div class="card-image center-align">
-                                <a class="naranja fs20 mayus modal-trigger" href="#modal{!!$obra->id !!}">
+                                <a class="naranja fs20 mayus modal-trigger" href="{{ route('obragaleria', $obra->id)}}">
                                     <div class="efecto">
                                         <span class="central">
                                             <i class="material-icons">
