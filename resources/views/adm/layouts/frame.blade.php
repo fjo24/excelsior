@@ -30,9 +30,13 @@
             <!-- Dropdown Structure -->
             <ul class="dropdown-content" id="dropdown1">
                 <li>
-                    <a href="{{ route('logout') }}">
-                        Cerrar Sesión
-                    </a>
+                    <a class="right" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('  Cerrar Sesión') }}
+                            </a>
+                            <form action="{{ route('logout') }}" id="logout-form" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                 </li>
             </ul>
             <nav>

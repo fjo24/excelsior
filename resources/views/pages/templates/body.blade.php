@@ -21,6 +21,8 @@ header('Access-Control-Allow-Origin: *');
                                     <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"/>
                                     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
                                     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                                    <script src='https://www.google.com/recaptcha/api.js'></script>
+
                                         <link href="{{ asset('plugins/materialize/css/materialize.min.css') }}" rel="stylesheet">
                                             <script src="//code.jquery.com/jquery-1.11.1.min.js">
                                             </script>

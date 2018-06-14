@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="{{ asset('plugins/materialize/css/materialize.min.css') }}">
 
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/login/admin.css') }}" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/admin/admin.css') }}" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/login/login.css') }}" />
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

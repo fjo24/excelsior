@@ -139,7 +139,7 @@ side-nav li>a>i, .sidenav li>a>[class^="mdi-"], .sidenav li>a li>a>[class*="mdi-
 
 /* label focus color */
  .input-field input:focus + label {
-   color: #32398E !important;
+   color: #FF0000 !important;
  }
  /* label underline focus color */
  .row .input-field input:focus {

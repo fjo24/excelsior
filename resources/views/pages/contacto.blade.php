@@ -48,6 +48,8 @@
 			          				{!!Form::textarea('mensaje', null, ['class'=>'materialize-textarea', 'placeholder'=>'Mensaje'])!!}
 					        	</div>
 							    <div class="col s6">
+					        	<div class="g-recaptcha" data-sitekey="6LdZ4F4UAAAAAIIqNo2E1AUxdyUPxi5ycqLd2r28"></div>
+					        	<br>
 							      	<button class="btn waves-effect waves-light z-depth-0" type="submit" name="action" style="background-color: #ff0000; color:white;">Enviar
 									</button>
 								</div>

@@ -62,7 +62,7 @@ Route::post('enviar-mail', [
 
 // ADMINISTRADOR
 
-Route::prefix('adm')->group(function () {
+Route::prefix('adm')->middleware('auth')->group(function () {
 
 //DASHBOARD
     Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
@@ -149,5 +149,11 @@ Route::prefix('adm')->group(function () {
 });
 
 Auth::routes();
+
+Route::prefix('adm')->group(function () {
+    Route::get('/', function () {
+        return view('/auth/login');
+    });
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
