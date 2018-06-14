@@ -62,7 +62,7 @@ Route::post('enviar-mail', [
 
 // ADMINISTRADOR
 
-Route::prefix('adm')->middleware('auth')->group(function () {
+Route::prefix('adm')->group(function () {
 
 //DASHBOARD
     Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
