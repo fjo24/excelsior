@@ -25,11 +25,12 @@
     display: table;
     background-color: rgba(51, 51, 51, 0.86);
     height: 104px;
-    font-weight: 900;
+    font-weight: 700;
+    line-height: 20px;
     font-family: 'Raleway';
     justify-content: center;
     align-items: center;
-    font-size: 29px;
+    font-size: 27px;
     position: relative;
     width: 100%;
     bottom: 104px;
