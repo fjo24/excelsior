@@ -9,7 +9,7 @@
                             <title>
                                 Excelsior - @yield('titulo')
                             </title>
-                            <link href="{{asset('img/favicon.png')}}" rel="icon" type="image/png"/>
+                            <link href="{{asset('img/layouts/logo-header.png')}}" rel="icon" type="image/png"/>
                             <link href="{{ asset('css/pages/layouts/header.css') }}" rel="stylesheet">
                                 <link href="{{ asset('css/pages/layouts/footer.css') }}" rel="stylesheet">
                                     @yield('css')
@@ -18,7 +18,7 @@
 header('Access-Control-Allow-Origin: *'); 
 ?>
                                     <link href="http://allfont.es/allfont.css?fonts=raleway-extrabold" rel="stylesheet" type="text/css" />-->
-                                    <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"/>
+                                    <link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet" type="text/css"/>
                                     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
                                     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
                                     <script src='https://www.google.com/recaptcha/api.js'></script>

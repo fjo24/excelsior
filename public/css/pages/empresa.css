@@ -4,11 +4,17 @@
 }
 .video {
     margin-top: 0px;
-    height: 630px;
+    height: 634px;
     background-color: #F6F6F6;
     color: #989699;
     font-family: 'Raleway';
 }
+
+@media screen and (max-width: 1400px) {
+        .video {
+            height: 515px!important;
+        }
+    }
 
 .video-container{
 	position: relative;

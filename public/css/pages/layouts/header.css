@@ -65,7 +65,8 @@ header .li-telefono {
 }
 header .numero {
     position: relative;
-    bottom: 5px;
+    bottom: 0px;
+    left: 5px;
 }
 header .li-red {
     background-color: transparent;

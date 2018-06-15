@@ -118,6 +118,13 @@
     height: 450px;
 }
 
+.bloque-consejos2{
+    display: table;
+    height: 450px;
+    background-color: #F0f0f0;
+
+}
+
 .texto{
     display: table-cell;
     vertical-align: middle;

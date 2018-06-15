@@ -26,7 +26,7 @@
                             @foreach($consejos as $consejo)
                             @if($i===0)
                             <div class="bloque-consejos left">
-                                <div class="col l6 s12 m6 center">
+                                <div class="col l6 s12 m6 center hide-on-med-and-down">
                                     <img alt="" src="{{asset($consejo->imagen)}}" style="">
                                     </img>
                                 </div>
@@ -58,7 +58,7 @@
                                         {!! $consejo->texto2 !!}
                                     </div>
                                 </div>
-                                <div class="col l6 s12 m6 center">
+                                <div class="col l6 s12 m6 center hide-on-med-and-down">
                                     <img alt="" src="{{asset($consejo->imagen)}}" style="">
                                     </img>
                                 </div>

@@ -4,23 +4,29 @@
     width: 100%;
 }
 .btexto {
-    padding-top: 95px;
+    padding-top: 62px;
     line-height: 10px;
 }
 .tbanner {
     color: #FFFFFF;
     font-family: 'Raleway';
-    font-size: 40px;
+    font-size: 55px;
+    font-weight: 800;
 }
 .tbanner2 {
     color: #FFFFFF;
     font-family: 'Raleway';
-    font-size: 40px;
+    font-size: 35px;
+    position: relative;
+    bottom: 4px;
 }
 .tbanner3 {
     color: #FFFFFF;
     font-family: 'Raleway';
     font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    top: 14px;
 }
 .img-destacado {
     width: 533px;
@@ -59,5 +65,5 @@
     font-family: 'Raleway'!important;
     font-size: 18px!important;
     margin-bottom: 0px;
-    margin-top: 40px;
+    margin-top: 26px;
 }

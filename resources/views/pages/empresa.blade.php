@@ -70,7 +70,7 @@
     </div>
 </div>
 <div class="video">
-    <div class="container" style="width: 70%;">
+    <div class="container" style="width: 55%;">
         <div class="row" style="">
             <div class="video-container">
                 <div class="video-container">

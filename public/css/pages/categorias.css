@@ -49,8 +49,8 @@
     position: absolute;
     opacity: 0;
     background-color: rgba(255, 0, 0, 0.75);
-    width: 338px;
-    height: 364px;
+    width: 92%;
+    height: 92%;
     z-index: 999;
     margin: 16px;
     display: table-cell;

@@ -30,10 +30,10 @@
                     </a>
                 </div>
                 <div class="li-telefono">
-                    <a href="">
-                        <i class="material-icons" style="margin-right: 7px;">phone_in_talk</i>
-                           <span class="numero">15-6392-2724</span>
-                    </a>
+                    
+                        <i class="material-icons" style="margin-right: 0px;">phone_in_talk</i>
+                           <span class="numero">0221 1 5639-2724</span>
+                   
                 </div>
             </div>
         </div>

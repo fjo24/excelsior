@@ -8,7 +8,7 @@
 @section('contenido')
             <div class="container">
                 <div class="flex-containter">
-                <span class="titulo-pre center" style="position: relative; left: 306px; top:42px;font-size: 27px;color: #FF0000;font-family: 'Raleway'; margin-bottom: 30px;">
+                <span class="titulo-pre center" style="position: relative; left: 37%; top:42px;font-size: 27px;color: #FF0000;font-family: 'Raleway'; margin-bottom: 30px;">
                     Solicitud de Presupuesto
                 </span>
                 <hr class="pre-line" style="width: 100px;height: 2px!important;background-color: red!important;border: 0px red;    margin-top: 47px!important;" />
@@ -22,14 +22,14 @@
                                             <div class="paso datos active col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-offset-1" id="elDiv1">
                                                 <span>
                                                 </span>
-                                                <p class="fuenteRC hide-on-med-and-down" style="position: absolute; color: #FF0000; width: 100px;left: 610; top: 177px;">
+                                                <p class="fuenteRC hide-on-med-and-down" style="position: absolute; color: #FF0000; width: 100px;left: 480%; margin-top: 129%;">
                                                     TU OBRA
                                                 </p>
                                             </div>
                                             <div class="paso obra col-xs-12 col-sm-4 col-md-4 col-lg-4 hide-on-med-and-down" id="elDiv2">
                                                 <span>
                                                 </span>
-                                                <p class="fuenteRC" style="width: 100px;color: #FF0000; position: absolute; left: 200px; font-weight: bold; top: 13px;">
+                                                <p class="fuenteRC" style="width: 100px;color: #FF0000; position: absolute; left: 78%; font-weight: bold; top: 9px;">
                                                     TUS DATOS
                                                 </p>
                                             </div>
@@ -79,7 +79,7 @@
                                         <div class="paso datos active col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-offset-1" id="elDiv1">
                                             <span>
                                             </span>
-                                            <p class="fuenteRC" style="position: absolute; right:-19px;top: 171px; color: #FF0000; font-weight: lighter; width: 100px;">
+                                            <p class="fuenteRC" style="position: absolute; right:-19px; color: #FF0000; font-weight: lighter; width: 100px; margin-top: 116%;">
                                                 TUS DATOS
                                             </p>
                                         </div>
@@ -89,7 +89,7 @@
                                             <div class="paso obra col-xs-12 col-sm-4 col-md-4 col-lg-4" id="elDiv2">
                                                 <span>
                                                 </span>
-                                                <p class="fuenteRC" style="position: absolute; width: 100%;left: 543px;top:8px;color: #FF0000; font-weight: bold;">
+                                                <p class="fuenteRC" style="position: absolute; width: 100%;left: 184%;top:8px;color: #FF0000; font-weight: bold;">
                                                     TU OBRA
                                                 </p>
                                             </div>

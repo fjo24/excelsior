@@ -4,7 +4,7 @@
 <link href="{{ asset('css/pages/productos.css') }}" rel="stylesheet"/>
 @endsection
 @section('contenido')
-<div class="container" style="width: 85%">
+<div class="container" style="width: 84.6%">
     <div class="productos">
         <div style="">
             <div class="row center">
@@ -18,7 +18,7 @@
                         <div class="div-producto">
                             <a href="{{ route('productoinfo', $producto->id)}}">
                                 @foreach($producto->imagenes as $imagen)
-                                        <img alt="" class="img-pro responsive-img" src="{{asset($imagen->ubicacion)}}"/>
+                                        <img alt="" class="img-pro responsive-img" src="{{asset($imagen->ubicacion)}}" style="" />
                                         @if($ready == 0)    
                                         @break;
                                     @endif
