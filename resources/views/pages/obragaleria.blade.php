@@ -21,7 +21,7 @@
                     <div class="col s12" style="padding-left: 0px;">
                         @foreach($obra->imagenes as $imagen)
                         <div class="cont-img">
-                            <img "="" alt="" class="responsive-img" id="producto" src="{{asset($imagen->imagen)}}" style="width: 100%;border:1px solid #AAAAAA;">
+                            <img alt="" class="responsive-img" id="producto" src="{{asset($imagen->imagen)}}" style="width: 100%;border:1px solid #AAAAAA;">
                             </img>
                         </div>
                         @if($ready == 0)    

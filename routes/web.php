@@ -15,7 +15,7 @@
 Route::get('/', 'PaginasController@home');
 
 //MANTENIMIENTO
-Route::get('/mantenimiento', 'PaginasController@mantenimiento');
+Route::get('/mantenimiento', 'PaginasController@mantenimiento')->name('mantenimiento');
 
 //EMPRESA
 Route::get('/empresa', 'PaginasController@empresa');

@@ -35,7 +35,7 @@
             <div class="items-servicio row" style="align-items: center;">
                 <div class="col l12 s12 m12">
                     @foreach($servicios as $servicio)
-                    <div class="col l3 s12 m6">
+                    <div class="col l2 s12 m6" style="margin: 0px 19px;">
                         <span class="img-servicio" style="">
                             <img alt="" src="{{asset($servicio->imagen)}}" style="">
                             </img>
@@ -52,7 +52,7 @@
         </hr>
     </div>
 </div>
-<div class="seccion-banner">
+<div class="seccion-banner" style="background-image: {!! $banner->imagen !!}">
     <div class="btexto">
         <div class="tbanner center">
             <p>

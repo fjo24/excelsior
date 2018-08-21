@@ -43,7 +43,7 @@
                         <img alt="seccion" height="300" src="{{ asset($categoria->imagen) }}" width="300"/>
                     </td>
                     <td>
-                        {!!$categoria->titulo!!}
+                        {!!$categoria->nombre!!}
                     </td>
                     <td>
                         {!!$categoria->orden!!}

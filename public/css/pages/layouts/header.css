@@ -102,6 +102,12 @@ nav ul a:hover {
     font-weight: bold;
     font-family: 'Raleway';
 }
+.activo {
+    background-color: transparent!important;
+    color: #FF0000!important;
+    font-weight: bold;
+    font-family: 'Raleway';
+}
 nav .item-left {
     position: relative;
     top: 41px;

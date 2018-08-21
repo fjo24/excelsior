@@ -33,7 +33,7 @@
 						    {!! Form::file('imagen') !!}
 						</div>
 						<div class="file-path-wrapper">
-						    {!! Form::text('imagen',null, ['class'=>'file-path ']) !!}
+						    {!! Form::text('imagen',null, ['class'=>'file-path ', 'placeholder' => 'Recomendado (1400 x 511)']) !!}
 						</div>
 					</div>
 				</div>

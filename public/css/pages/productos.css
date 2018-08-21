@@ -60,14 +60,6 @@
     border: 1px!important;
     border-radius:10px!important;
     background-color: #FF0000!important;
-    left: 0px!important;
-    top: 5px!important;
-}
-
-.contenido-info{
-    font-family: 'Raleway';
-    font-size: 24px;
-    color: #858585!important;
-    position: relative;
-    top: -40px;
+    left: -28px!important;
+    top: 3px!important;
 }
